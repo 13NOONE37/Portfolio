@@ -1,0 +1,57 @@
+{
+  "Header": {
+    "about": "About",
+    "projects": "Projects",
+    "offer": "Offer",
+    "blog": "Blog",
+    "contact_me": "Contact me"
+  },
+  "Footer": {
+    "made_with": "Made with ❤️ by Oliwer Klauze. All rights reserved."
+  },
+  "Shared": {
+    "lets_contact": "Let's contact!",
+    "so_interested": "So, <mark>interested</mark>?",
+    "its_time_to_build_product_your_clients_will_love": "It’s time to <mark>build product</mark> your clients will love!",
+    "contact_me": "Contact me!",
+    "lets_create_something_together": "Let’s <mark>create</mark> something together!",
+    "privacy_policy": "Privacy policy",
+    "feel_free_to_connect_with_me_on_social": "Feel free to conect with me on social",
+    "you_can_also_email_or_call_me": "You can also email or call me",
+    "view_all_projects": "View all projects",
+    "explore_more": "Explore more"
+  },
+  "Home": {
+    "my_name_is_oliwer": "Jestem <mark>Oliwer</mark>",
+    "i_turn": "I turn",
+    "ideas": "ideas",
+    "into": "into",
+    "reality": "reality",
+
+    "my_abilites": "My <br></br> abilities",
+    "my_abilities_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important> with a strong focus on front-end technologies. Below, you can explore my skillset.",
+    "frontend_development": "Frontend Development",
+    "backend_development": "Backend Development",
+    "tools_and_technologies": "Tools and Technologies",
+
+    "my_work": "My <br></br> work",
+    "my_work_description": "Explore some of my proudest achievements. Here, you'll find <important>impressive 3D websites</important> and <important>intuitive applications</important> designed to help my clients manage their businesses effectively.",
+
+    "my_offer": "My <br></br> offer",
+    "my_offer_description": "<important>I’ll bring your ideas to life from scratch</important>, using fast, modern technologies that ensure reliability and future-proof your application with easy scalability.",
+    "websites": "Websites",
+    "websites_description": "Whether you need a striking landing page, a personal site, a blog, or an e-commerce platform, I build engaging websites that showcase your brand and provide an exceptional user experience.",
+    "webapps": "Webapps",
+    "webapps_description": "From intuitive management panels to tailored IT solutions, I create web applications that streamline operations and address your unique needs with user-friendly designs.",
+
+    "contact_me": "Contact <br></br> me",
+    "contact_form": "Contact form",
+    "your_name": "Your name",
+    "your_email": "Your email",
+    "your message": "Your message",
+    "send_message": "Send message",
+
+    "my_blog": "My blog",
+    "my_blog_description": "I share my thoughts here. You'll find my opinions on social and IT issues. Below you can see selected posts!"
+  }
+}
