@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+}
+.corner {
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+
+  border-color: var(--color-white);
+  border-width: 2px;
+
+  transition: transform 0.2s var(--transition-button_1),
+    border 0.2s var(--transition-button_1);
+  transform-origin: center;
+}
+.top_left {
+  top: 0;
+  left: 0;
+  border-left-style: solid;
+  border-top-style: solid;
+}
+.top_right {
+  top: 0;
+  right: 0;
+  border-right-style: solid;
+  border-top-style: solid;
+}
+.bottom_left {
+  bottom: 0;
+  left: 0;
+  border-left-style: solid;
+  border-bottom-style: solid;
+}
+.bottom_right {
+  bottom: 0;
+  right: 0;
+  border-right-style: solid;
+  border-bottom-style: solid;
+}
+.button {
+  cursor: pointer;
+  user-select: none;
+
+  width: 100%;
+  border: none;
+  background-color: transparent;
+
+  text-decoration: none;
+  color: var(--color-white);
+
+  padding: 0.5em 1.5em;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+@media (hover: hover) and (pointer: fine) {
+  .container:hover .corner {
+    transform: rotate(180deg);
+    border-color: var(--color-primary_darker);
+  }
+}
