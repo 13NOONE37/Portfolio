@@ -5,7 +5,8 @@
     "offer": "Offer",
     "blog": "Blog",
     "contact_me": "Contact me",
-    "toggle_language": "Click to toggle language beetwen English and Polish"
+    "change_language_to_english": "Change language to English",
+    "change_language_to_polish": "Change language to Polish"
   },
   "Footer": {
     "made_with": "Made with ❤️ by Oliwer Klauze. All rights reserved."
