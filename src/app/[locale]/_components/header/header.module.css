@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+
+  background-color: var(--color-dark-alpha_95);
+}
+.content {
+  width: min(100%, var(--section-width));
+  margin: auto;
+
+  padding: 1rem var(--section-padding);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+}
