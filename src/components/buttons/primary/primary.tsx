@@ -1,9 +1,11 @@
-import React, { ButtonHTMLAttributes, FC, HTMLProps } from 'react';
-import Link, { LinkProps } from 'next/link';
+import React, { ButtonHTMLAttributes, FC, HTMLProps, ReactNode } from 'react';
+import { Link } from '@/utils/navigation';
+
 import cx from 'classnames';
 
 import styles from './primary.module.css';
 import fonts from '@/styles/fonts.module.css';
+import { ButtonLinkType } from '../LinkType';
 
 const PrimaryButton: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
   children,
@@ -17,11 +19,7 @@ const PrimaryButton: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
   );
 };
 
-const PrimaryLink: FC<LinkProps & HTMLProps<HTMLAnchorElement>> = ({
-  children,
-  className,
-  ...props
-}) => {
+const PrimaryLink: FC<ButtonLinkType> = ({ children, className, ...props }) => {
   return (
     <Link className={cx(fonts.button, styles.button, className)} {...props}>
       {children}

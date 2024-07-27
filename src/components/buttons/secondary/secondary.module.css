@@ -1,6 +1,7 @@
 .container {
   position: relative;
 }
+
 .corner {
   position: absolute;
   width: 0.6em;
@@ -37,6 +38,7 @@
   border-right-style: solid;
   border-bottom-style: solid;
 }
+
 .button {
   cursor: pointer;
   user-select: none;

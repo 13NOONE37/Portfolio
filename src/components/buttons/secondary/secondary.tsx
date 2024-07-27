@@ -1,9 +1,11 @@
-import React, { ButtonHTMLAttributes, FC, HTMLProps } from 'react';
-import Link, { LinkProps } from 'next/link';
+import React, { ButtonHTMLAttributes, FC, HTMLProps, ReactNode } from 'react';
+
+import { Link } from '@/utils/navigation';
 import cx from 'classnames';
 
 import styles from './secondary.module.css';
 import fonts from '@/styles/fonts.module.css';
+import { ButtonLinkType } from '../LinkType';
 
 const Corners = () => (
   <>
@@ -29,7 +31,7 @@ const SecondaryButton: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
   );
 };
 
-const SecondaryLink: FC<LinkProps & HTMLProps<HTMLAnchorElement>> = ({
+const SecondaryLink: FC<ButtonLinkType> = ({
   children,
   className,
   ...props
