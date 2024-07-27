@@ -77,7 +77,7 @@
   font-weight: var(--fw-medium);
   line-height: 1.75;
 
-  color: var(--color-grey_light);
+  color: var(--color-grey-dark_light);
 }
 
 .body__small {
@@ -85,14 +85,14 @@
   font-weight: var(--fw-medium);
   line-height: 1.75;
 
-  color: var(--color-grey_light);
+  color: var(--color-grey-dark_light);
 }
 .body__big {
   font-size: var(--fs-500);
   font-weight: var(--fw-medium);
   line-height: 1.75;
 
-  color: var(--color-grey_light);
+  color: var(--color-grey-dark_light);
 }
 @media (min-width: 768px) {
 }

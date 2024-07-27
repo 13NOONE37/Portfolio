@@ -17,8 +17,10 @@
   --color-light: #f0f0f0;
   --color-white-alpha_10: rgba(255, 255, 255, 0.1);
 
-  --color-grey: #212121;
-  --color-grey-light: #2d2e30;
+  --color-grey-dark: #212121;
+  --color-grey-dark-light: #2d2e30;
+
+  --color-grey-light: #989898;
 
   --color-primary_darker: hsl(352, 72%, 47%);
   --color-primary_darker_hover: hsl(352, 72%, 35%);
