@@ -11,6 +11,7 @@ import fonts from '@/styles/fonts.module.css';
 import styles from './nav.module.css';
 import scrollToId from '@/utils/scrollToId';
 import useDetectOutsideClick from '@/hooks/useDetectOutsideClick';
+import { SECTION_IDS } from '@/app/[locale]/section_ids';
 
 const Nav = () => {
   const t = useTranslations('Header');
@@ -36,7 +37,7 @@ const Nav = () => {
           <li>
             <button
               onClick={() => {
-                handleLinkElement('about');
+                handleLinkElement(SECTION_IDS.about);
               }}
               className={cx(fonts.button, styles.link)}
             >
@@ -46,7 +47,7 @@ const Nav = () => {
           <li>
             <button
               onClick={() => {
-                handleLinkElement('projects');
+                handleLinkElement(SECTION_IDS.projects);
               }}
               className={cx(fonts.button, styles.link)}
             >
@@ -56,7 +57,7 @@ const Nav = () => {
           <li>
             <button
               onClick={() => {
-                handleLinkElement('offer');
+                handleLinkElement(SECTION_IDS.offer);
               }}
               className={cx(fonts.button, styles.link)}
             >
@@ -66,14 +67,14 @@ const Nav = () => {
           <li>
             <button
               onClick={() => {
-                handleLinkElement('blog');
+                handleLinkElement(SECTION_IDS.blog);
               }}
               className={cx(fonts.button, styles.link)}
             >
               {t('blog')}
             </button>
           </li>
-          <li className={styles.contact}>
+          <li className={SECTION_IDS.contact}>
             <SecondaryButton
               onClick={() => {
                 handleLinkElement('contact');
