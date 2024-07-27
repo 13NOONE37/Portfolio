@@ -28,11 +28,16 @@ const Footer = () => {
           <ContactButton />
         </div>
 
-        <Link href={'privacy'} className={styles.privacy}>
+        <Link
+          href={'privacy'}
+          className={cx(fonts.body__small, styles.privacy)}
+        >
           {tShared('privacy_policy')}
         </Link>
 
-        <span className={cx(fonts.body, styles.goodbye)}>{t('made_with')}</span>
+        <span className={cx(fonts.body__small, styles.goodbye)}>
+          {t('made_with')}
+        </span>
       </div>
     </footer>
   );
