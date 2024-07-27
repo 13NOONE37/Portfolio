@@ -4,14 +4,15 @@
     "projects": "Projects",
     "offer": "Offer",
     "blog": "Blog",
-    "contact_me": "Contact me"
+    "contact_me": "Contact me",
+    "toggle_language": "Click to toggle language beetwen English and Polish"
   },
   "Footer": {
     "made_with": "Made with ❤️ by Oliwer Klauze. All rights reserved."
   },
   "Shared": {
     "lets_contact": "Let's contact!",
-    "so_interested": "So, <mark>interested</mark>?",
+    "so_interested": "So, <mark>interested?</mark>",
     "its_time_to_build_product_your_clients_will_love": "It’s time to <mark>build product</mark> your clients will love!",
     "contact_me": "Contact me!",
     "lets_create_something_together": "Let’s <mark>create</mark> something together!",
@@ -19,7 +20,8 @@
     "feel_free_to_connect_with_me_on_social": "Feel free to conect with me on social",
     "you_can_also_email_or_call_me": "You can also email or call me",
     "view_all_projects": "View all projects",
-    "explore_more": "Explore more"
+    "explore_more": "Explore more",
+    "go_to_home_page": "Go to home page"
   },
   "Home": {
     "my_name_is_oliwer": "My name is <mark>Oliwer</mark>",
