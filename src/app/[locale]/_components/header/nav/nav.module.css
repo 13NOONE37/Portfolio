@@ -21,10 +21,10 @@
 .lang--divider {
   width: 100%;
   height: 1px;
-  background-color: var(--color-grey);
+  background-color: var(--color-grey-dark);
 }
 .lang--option {
-  color: var(--color-grey-light);
+  color: var(--color-grey-dark);
   text-decoration: none;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -43,7 +43,7 @@
   right: var(--section-padding);
 
   padding: 3rem 1.5rem;
-  background-color: var(--color-grey);
+  background-color: var(--color-grey-dark);
   border-radius: 10px;
 
   transform: translateY(25%);
