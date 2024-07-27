@@ -1,8 +1,10 @@
-const scrollToId = (id: string, offset?: number) => {
-  const scrollOffset = offset ?? 120;
+const scrollToId = (id: string, offset?: number, failCallback?: () => void) => {
+  const ifFailCallback = failCallback ?? (() => {});
+
+  const scrollOffset = offset ?? 0;
   const element = document.getElementById(id);
 
-  if (!element) return;
+  if (!element) return ifFailCallback();
   const { top } = element.getBoundingClientRect();
   const scrollPosition = top + window.scrollY - scrollOffset;
 
