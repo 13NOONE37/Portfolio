@@ -36,7 +36,7 @@ const Footer = () => {
         </Link>
 
         <span className={cx(fonts.body__small, styles.goodbye)}>
-          {t('made_with')}
+          {t.rich('made_with')}
         </span>
       </div>
     </footer>

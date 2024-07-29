@@ -42,7 +42,7 @@
   grid-area: goodbye;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 530px) {
   .content {
     grid-template-areas: 'logo contact' 'goodbye privacy';
   }
