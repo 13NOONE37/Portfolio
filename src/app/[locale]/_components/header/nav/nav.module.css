@@ -1,9 +1,18 @@
 .nav--container {
   display: flex;
   align-items: center;
-  --header-height: 65px;
+  --header-height: 75px;
 }
-
+.nav--container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  backdrop-filter: blur(4px);
+}
 .hamburger {
   padding: 0.5rem;
   cursor: pointer;
@@ -24,7 +33,7 @@
   background-color: var(--color-grey-dark);
 }
 .lang--option {
-  color: var(--color-grey-dark);
+  color: var(--color-grey-light);
   text-decoration: none;
 }
 @media (hover: hover) and (pointer: fine) {
