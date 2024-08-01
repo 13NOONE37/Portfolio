@@ -30,14 +30,9 @@
   grid-area: privacy;
   place-self: center end;
 
-  color: inherit;
   text-align: center;
-  text-decoration: none;
 }
-.privacy:hover {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-}
+
 .goodbye {
   grid-area: goodbye;
   text-align: center;

@@ -8,6 +8,7 @@ import ContactButton from './contactButton';
 
 import styles from './footer.module.css';
 import fonts from '@/styles/fonts.module.css';
+import PrivacyButton from '@/components/shared/privacyButton/privacyButton';
 
 const Footer = () => {
   const t = useTranslations('Footer');
@@ -28,12 +29,7 @@ const Footer = () => {
           <ContactButton />
         </div>
 
-        <Link
-          href={'privacy'}
-          className={cx(fonts.body__small, styles.privacy)}
-        >
-          {tShared('privacy_policy')}
-        </Link>
+        <PrivacyButton className={styles.privacy} />
 
         <span className={cx(fonts.body__small, styles.goodbye)}>
           {t.rich('made_with')}
