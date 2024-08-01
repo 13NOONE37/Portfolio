@@ -1,0 +1,8 @@
+.subheading {
+  text-align: center;
+}
+.subheading mark {
+  all: unset;
+
+  color: var(--color-primary);
+}

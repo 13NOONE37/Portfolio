@@ -1,0 +1,20 @@
+.socials {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.link {
+  display: grid;
+  place-items: center;
+}
+.link svg {
+  fill: var(--color-white);
+  transition: fill 0.15s var(--transition-button_1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .link:hover svg {
+    fill: var(--color-primary);
+  }
+}

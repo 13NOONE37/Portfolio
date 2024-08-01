@@ -1,0 +1,40 @@
+.contactMe {
+  padding: 0 var(--section-padding);
+  margin: 4rem 0;
+}
+.heading {
+}
+.subHeading {
+  margin-top: 1.5em;
+}
+.boxes {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'form' 'contact';
+  gap: 1rem;
+}
+
+.form {
+  grid-area: form;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+@media screen and (min-width: 768px) {
+  .boxes {
+    grid-template-columns: 1fr 340px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'form contact' 'form _';
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .boxes {
+    grid-template-columns: 1fr 380px;
+    gap: 3rem;
+  }
+}

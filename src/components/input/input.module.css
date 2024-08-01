@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'label error' 'input input';
+}
+.label {
+  grid-area: label;
+  place-self: center start;
+
+  color: var(--color-grey-light);
+  margin-left: 1rem;
+}
+.error {
+  grid-area: error;
+  place-self: center end;
+  color: var(--color-warning);
+  margin-right: 1rem;
+}
+.input {
+  grid-area: input;
+  width: 100%;
+
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-dark);
+
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  color: var(--color-light);
+  border: 2px solid transparent;
+}
+.input:focus {
+  border: 2px solid var(--color-primary);
+}
+
+.input__textarea {
+  min-height: 15em;
+  resize: vertical;
+}
