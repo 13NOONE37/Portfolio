@@ -1,0 +1,5 @@
+.paragraph {
+  max-width: var(--paragraph-width);
+}
+.paragraph strong {
+}
