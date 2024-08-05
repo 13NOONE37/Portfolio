@@ -3,7 +3,8 @@ import cx from 'classnames';
 import styles from './hero.module.css';
 import fonts from '@/styles/fonts.module.css';
 import { useTranslations } from 'next-intl';
-import ArrowIcon from '@/assets/icons/arrow';
+import ArrowEndIcon from '@/assets/icons/arrowEnd';
+import GoNextCTA from './goNextCTA';
 
 const Hero = () => {
   const t = useTranslations('Home');
@@ -22,7 +23,7 @@ const Hero = () => {
           </span>
           <span className={styles.arrow}>
             <div className={styles.arrowEnd}>
-              <ArrowIcon />
+              <ArrowEndIcon />
             </div>
           </span>
         </div>
@@ -36,11 +37,12 @@ const Hero = () => {
           </span>
           <span className={styles.arrow}>
             <div className={styles.arrowEnd}>
-              <ArrowIcon />
+              <ArrowEndIcon />
             </div>
           </span>
         </div>
       </div>
+      <GoNextCTA />
     </section>
   );
 };
