@@ -54,12 +54,17 @@
   --section-width: 1240px;
   --article-width: 712px;
 
-  --section-padding: 0.5rem;
+  --section-padding: 0.8rem;
 
   --transition-button_1: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   --transition-menu: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
-@media screen and (min-width: 340px) {
+@media screen and (min-width: 320px) {
+  :root {
+    --section-padding: 1rem;
+  }
+}
+@media screen and (min-width: 360px) {
   :root {
     --section-padding: 1.5rem;
   }
