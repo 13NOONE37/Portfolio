@@ -35,6 +35,7 @@
 .lang--option {
   color: var(--color-grey-light);
   text-decoration: none;
+  user-select: none;
 }
 @media (hover: hover) and (pointer: fine) {
   .lang--option:hover {

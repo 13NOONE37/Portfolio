@@ -7,7 +7,6 @@
   gap: 2rem;
 
   margin: calc(2 * var(--section-padding)) 0;
-  user-select: none;
 }
 .introduction {
   text-align: center;
