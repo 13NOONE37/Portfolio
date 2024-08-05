@@ -1,0 +1,32 @@
+.about {
+  padding: 0 var(--section-padding);
+  margin: 4rem 0;
+}
+.heading {
+}
+.description {
+  margin-top: 2rem;
+}
+.boxes {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 840px) {
+  .boxes {
+    margin-top: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .boxes {
+    gap: 4rem;
+  }
+}

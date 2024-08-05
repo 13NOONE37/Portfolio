@@ -1,0 +1,30 @@
+.container {
+  border: 10px solid var(--color-grey-dark);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+}
+.title {
+}
+.skills {
+  margin-top: 2rem;
+
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skill {
+  border-radius: 10px;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-grey-dark);
+  background-color: var(--color-white-alpha_10);
+  color: var(--color-white);
+}
+.skill__highlited {
+  background-color: var(--color-primary_alpha_250);
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
