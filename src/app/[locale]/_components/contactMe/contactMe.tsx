@@ -1,11 +1,11 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import { SECTION_IDS } from '../../section_ids';
-import SectionHeading from '../headings/sectionHeading/sectionHeading';
+import SectionHeading from '../textComponents/sectionHeading/sectionHeading';
 
 import styles from './contactMe.module.css';
 import fonts from '@/styles/fonts.module.css';
-import SectionSubHeading from '../headings/sectionSubHeading/sectionSubHeading';
+import SectionSubHeading from '../textComponents/sectionSubHeading/sectionSubHeading';
 import ContactForm from './contactForm/contactForm';
 import Contact from './contact/contact';
 
