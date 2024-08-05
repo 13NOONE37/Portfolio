@@ -15,7 +15,7 @@
   position: relative;
   z-index: 2;
   color: var(--color-white);
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 .link::before {
   content: '';
