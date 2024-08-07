@@ -3,12 +3,13 @@ import React from 'react';
 const ArrowIcon = () => {
   return (
     <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      height="24px"
-      viewBox="0 -960 960 960"
-      width="24px"
     >
-      <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+      <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" />
     </svg>
   );
 };

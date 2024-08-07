@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
-import { SECTION_IDS } from '../../section_ids';
+import { SECTION_IDS } from '@/app/section_ids';
 import SectionHeading from '../textComponents/sectionHeading/sectionHeading';
 
 import styles from './contactMe.module.css';

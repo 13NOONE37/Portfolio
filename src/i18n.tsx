@@ -11,7 +11,7 @@ export default getRequestConfig(async ({ locale }) => {
       important: (chunks) => <strong>{chunks}</strong>,
       mark: (chunks) => <mark>{chunks}</mark>,
       br: () => <br />,
-      year: (test) => date.getFullYear(),
+      year: () => date.getFullYear(),
     },
 
     messages: (await import(`/messages/${locale}.json`)).default,

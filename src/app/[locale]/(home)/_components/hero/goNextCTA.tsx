@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { SECTION_IDS } from '../../section_ids';
+import { SECTION_IDS } from '@/app/section_ids';
 import scrollToId from '@/utils/scrollToId';
 import styles from './hero.module.css';
 import ArrowIcon from '@/assets/icons/arrow';

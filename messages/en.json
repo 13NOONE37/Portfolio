@@ -14,7 +14,7 @@
   "Shared": {
     "lets_contact": "Let's contact!",
     "so_interested": "So, <mark>interested?</mark>",
-    "its_time_to_build_product_your_clients_will_love": "It’s time to <mark>build product</mark> your clients will love!",
+    "its_time_to_build_product_your_clients_will_love": "It’s time to <mark>build product</mark><br></br> your clients will love!",
     "contact_me": "Contact me!",
     "lets_create_something_together": "Let’s <mark>create</mark> something together!",
     "privacy_policy": "Privacy policy",
@@ -32,14 +32,14 @@
     "reality": "reality"
   },
   "About": {
-    "my_abilites": "My <br></br> abilities",
+    "my_abilites": "My <br></br> <mark>abilities</mark>",
     "my_abilities_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important> with a strong focus on front-end technologies. Below, you can explore my skillset.",
     "frontend_development": "Frontend Development",
     "backend_development": "Backend Development",
     "tools_and_technologies": "Tools and Technologies"
   },
   "Work": {
-    "my_work": "My <br></br> work",
+    "my_work": "My <br></br> <mark>work</mark>",
     "my_work_description": "Explore some of my proudest achievements. Here, you'll find <important>impressive 3D websites</important> and <important>intuitive applications</important> designed to help my clients manage their businesses effectively."
   },
   "Offer": {

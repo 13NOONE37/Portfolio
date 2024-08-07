@@ -1,14 +1,14 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
-import { SECTION_IDS } from '../../section_ids';
-import SectionHeading from '../textComponents/sectionHeading/sectionHeading';
+import { SECTION_IDS } from '@/app/section_ids';
+import SectionHeading from '../../../_components/textComponents/sectionHeading/sectionHeading';
 
-import styles from './about.module.css';
+import styles from './aboutMe.module.css';
 import fonts from '@/styles/fonts.module.css';
-import SectionDescription from '../textComponents/sectionDescription/sectionDescription';
+import SectionDescription from '../../../_components/textComponents/sectionDescription/sectionDescription';
 import SkillBox from './skillBox/skillBox';
 
-const About = () => {
+const AboutMe = () => {
   const t = useTranslations('About');
   return (
     <section className={styles.about} id={SECTION_IDS.about}>
@@ -57,4 +57,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutMe;

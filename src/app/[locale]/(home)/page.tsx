@@ -1,16 +1,10 @@
-import { useTranslations } from 'next-intl';
-import styles from './page.module.css';
-import fonts from '@/styles/fonts.module.css';
-
-import {
-  PrimaryLink,
-  PrimaryButton,
-} from '@/components/buttons/primary/primary';
-import {
-  SecondaryButton,
-  SecondaryLink,
-} from '@/components/buttons/secondary/secondary';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import styles from './page.module.css';
+import ContactMe from '../_components/contactMe/contactMe';
+import Hero from './_components/hero/hero';
+import AboutMe from './_components/aboutMe/aboutMe';
+import MyWork from './_components/myWork/myWork';
+import MyOffer from './_components/myOffer/myOffer';
 
 export default function Home({
   params: { locale },
@@ -18,36 +12,14 @@ export default function Home({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations('Home');
 
   return (
     <main className={styles.main}>
-      {t.rich('my_name_is_oliwer')}
-      <div
-        style={{
-          margin: '50px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '10px',
-          width: '160px',
-        }}
-      >
-        <PrimaryButton>Contact me</PrimaryButton>
-        <PrimaryLink href={'/'}>View project</PrimaryLink>
-      </div>
-      <div
-        style={{
-          margin: '50px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '10px',
-          width: '160px',
-        }}
-      >
-        <SecondaryButton>Contact me</SecondaryButton>
-
-        <SecondaryLink href={'/'}>Contact me</SecondaryLink>
-      </div>
+      <Hero />
+      <AboutMe />
+      <MyWork />
+      <MyOffer />
+      <ContactMe />
     </main>
   );
 }

@@ -11,7 +11,7 @@ import fonts from '@/styles/fonts.module.css';
 import styles from './nav.module.css';
 import scrollToId from '@/utils/scrollToId';
 import useDetectOutsideClick from '@/hooks/useDetectOutsideClick';
-import { SECTION_IDS } from '@/app/[locale]/section_ids';
+import { SECTION_IDS } from '@/app/section_ids';
 
 const Nav = () => {
   const t = useTranslations('Header');

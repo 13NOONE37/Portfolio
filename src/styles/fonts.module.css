@@ -80,16 +80,15 @@
 
   color: var(--color-grey-light);
 }
-.body__big {
-  font-size: var(--fs-500);
-  font-weight: var(--fw-medium);
-  line-height: 1.75;
 
-  color: var(--color-grey-light);
-}
 @media (min-width: 768px) {
   .body__small {
     font-size: var(--fs-300);
+  }
+}
+@media (min-width: 1240px) {
+  .body {
+    font-size: var(--fs-500);
   }
 }
 @media (min-width: 1368px) {

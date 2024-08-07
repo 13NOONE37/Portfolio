@@ -1,0 +1,32 @@
+.projects {
+  padding: 0 var(--section-padding);
+  margin: 4rem 0;
+}
+.heading {
+}
+.description {
+  margin-top: 2rem;
+}
+.viewAllProjects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.interestedBox {
+  margin-top: 3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .viewAllProjects {
+    margin-top: 7rem;
+  }
+  .interestedBox {
+    margin-top: 5rem;
+  }
+}
+@media screen and (min-width: 840px) {
+}
+
+@media screen and (min-width: 1240px) {
+}
