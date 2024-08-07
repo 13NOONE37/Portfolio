@@ -29,51 +29,43 @@ const Nav = () => {
     setShowMenu(false);
   };
 
+  const menuOptions = [
+    {
+      id: SECTION_IDS.about,
+      text: t('about'),
+    },
+    {
+      id: SECTION_IDS.projects,
+      text: t('projects'),
+    },
+    {
+      id: SECTION_IDS.offer,
+      text: t('offer'),
+    },
+    // {
+    //   id: SECTION_IDS.blog,
+    //   text: t('blog'),
+    // },
+  ];
+
   return (
     <div className={cx(styles['nav--container'], { [styles.show]: showMenu })}>
       <div className={styles.mask} />
       <nav className={styles.links} ref={containerRef}>
         <ul>
-          <li>
-            <button
-              onClick={() => {
-                handleLinkElement(SECTION_IDS.about);
-              }}
-              className={cx(fonts.button, styles.link)}
-            >
-              {t('about')}
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                handleLinkElement(SECTION_IDS.projects);
-              }}
-              className={cx(fonts.button, styles.link)}
-            >
-              {t('projects')}
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                handleLinkElement(SECTION_IDS.offer);
-              }}
-              className={cx(fonts.button, styles.link)}
-            >
-              {t('offer')}
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                handleLinkElement(SECTION_IDS.blog);
-              }}
-              className={cx(fonts.button, styles.link)}
-            >
-              {t('blog')}
-            </button>
-          </li>
+          {menuOptions.map(({ id, text }) => (
+            <li key={id}>
+              <button
+                onClick={() => {
+                  handleLinkElement(id);
+                }}
+                className={cx(fonts.button, styles.link)}
+              >
+                {text}
+              </button>
+            </li>
+          ))}
+
           <li className={SECTION_IDS.contact}>
             <SecondaryButton
               onClick={() => {
