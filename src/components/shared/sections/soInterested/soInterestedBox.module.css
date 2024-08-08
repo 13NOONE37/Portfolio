@@ -1,0 +1,19 @@
+.interestedBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.interestedBox--buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .interestedBox--buttons {
+    flex-direction: row;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+}
