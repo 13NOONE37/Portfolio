@@ -1,8 +1,9 @@
 import { SECTION_IDS } from '@/app/section_ids';
 import { PrimaryButton } from '@/components/buttons/primary/primary';
+import { useRouter } from '@/utils/navigation';
 import scrollToId from '@/utils/scrollToId';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/router';
+
 import React from 'react';
 
 const LetsContact = () => {
