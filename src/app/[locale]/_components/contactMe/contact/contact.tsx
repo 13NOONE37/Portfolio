@@ -6,6 +6,7 @@ import Socials from './socials/socials';
 
 import styles from './contact.module.css';
 import fonts from '@/styles/fonts.module.css';
+import { personalInformations } from '@/config/personalInformations';
 
 const Contact = ({ className }: { className?: string }) => {
   const t = useTranslations('Contact');
@@ -16,16 +17,16 @@ const Contact = ({ className }: { className?: string }) => {
 
       <Link
         className={cx(fonts.body, styles.link)}
-        href={`mailto:${process.env.NEXT_PUBLIC_BUISNESS_EMAIL}`}
+        href={`mailto:${personalInformations.email}`}
       >
-        {process.env.NEXT_PUBLIC_BUISNESS_EMAIL}
+        {personalInformations.email}
       </Link>
 
       <Link
         className={cx(fonts.body, styles.link)}
-        href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
+        href={`tel:${personalInformations.phone}`}
       >
-        {process.env.NEXT_PUBLIC_PHONE_NUMBER}
+        {personalInformations.phone}
       </Link>
 
       <Socials />

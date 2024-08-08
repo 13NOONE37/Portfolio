@@ -4,18 +4,19 @@ import GithubIcon from '@/assets/icons/github';
 import MessengerIcon from '@/assets/icons/messenger';
 import styles from './socials.module.css';
 import { Link } from '@/utils/navigation';
+import { personalInformations } from '@/config/personalInformations';
 
 const Socials = () => {
-  const t = useTranslations('Contact');
+  const t = useTranslations('Shared');
 
   const links: { href: string; ariaLabel?: string; icon: ReactNode }[] = [
     {
-      href: 'https://github.com/13NOONE37',
+      href: personalInformations.github,
       ariaLabel: t('visit_my_github'),
       icon: <GithubIcon />,
     },
     {
-      href: 'https://www.messenger.com/t/100007303174533',
+      href: personalInformations.messenger,
       ariaLabel: t('contact_with_me_on_messenger'),
       icon: <MessengerIcon />,
     },

@@ -9,7 +9,7 @@ import fonts from '@/styles/fonts.module.css';
 import { z, ZodError } from 'zod';
 import { Input, Textarea } from '@/components/input/input';
 import { PrimaryButton } from '@/components/buttons/primary/primary';
-import PrivacyButton from '@/components/shared/privacyButton/privacyButton';
+import PrivacyButton from '@/components/shared/buttons/privacyButton/privacyButton';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 interface Values {
