@@ -1,0 +1,9 @@
+.privacy {
+  text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .privacy:hover {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
