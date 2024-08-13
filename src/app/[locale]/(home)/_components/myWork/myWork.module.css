@@ -5,27 +5,35 @@
 .heading {
 }
 .description {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .viewAllProjects {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 }
 .interestedBox {
   margin-top: 3.5rem;
 }
-
+.list {
+  margin-top: 4rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.list--element {
+}
 @media screen and (min-width: 768px) {
   .viewAllProjects {
-    margin-top: 7rem;
+    margin-top: 6rem;
   }
   .interestedBox {
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 868px) {
 }
 
 @media screen and (min-width: 1240px) {

@@ -139,7 +139,7 @@
     margin-left: 2rem;
   }
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 868px) {
   .links ul {
     gap: 3rem;
   }

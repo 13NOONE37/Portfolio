@@ -8,7 +8,7 @@
   margin-top: 1rem;
 }
 .timeToBuild {
-  margin-top: 6rem;
+  margin-top: 3.5rem;
 }
 
 .list {
@@ -75,7 +75,12 @@
     align-self: flex-end;
   }
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 768px) {
+  .timeToBuild {
+    margin-top: 6rem;
+  }
+}
+@media screen and (min-width: 868px) {
 }
 
 @media screen and (min-width: 1240px) {

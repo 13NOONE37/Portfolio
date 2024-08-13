@@ -8,7 +8,7 @@ import ContactButton from './contactButton';
 
 import styles from './footer.module.css';
 import fonts from '@/styles/fonts.module.css';
-import PrivacyButton from '@/components/shared/privacyButton/privacyButton';
+import PrivacyButton from '@/components/shared/buttons/privacyButton/privacyButton';
 
 const Footer = () => {
   const t = useTranslations('Footer');

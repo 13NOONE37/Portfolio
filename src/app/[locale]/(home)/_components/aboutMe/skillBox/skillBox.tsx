@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import styles from './skillBox.module.css';
 import fonts from '@/styles/fonts.module.css';
+import Tag from '@/components/shared/tag/tag';
 
 const SkillBox = ({
   title,
@@ -15,12 +16,8 @@ const SkillBox = ({
       <h2 className={cx(fonts.heading_400, styles.title)}>{title}</h2>
       <ul className={styles.skills}>
         {skills.map(({ name, highlited }) => (
-          <li
-            className={cx(fonts.button, styles.skill, {
-              [styles.skill__highlited]: highlited,
-            })}
-          >
-            {name}
+          <li>
+            <Tag highlited={highlited}>{name}</Tag>
           </li>
         ))}
       </ul>

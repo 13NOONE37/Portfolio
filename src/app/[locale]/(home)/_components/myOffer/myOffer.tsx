@@ -13,8 +13,8 @@ import SectionHeading from '../../../_components/textComponents/sectionHeading/s
 import TimeToBuildProject from '../../../../../components/shared/sections/timeToBuildProject/timeToBuildProject';
 import LetsContact from '@/components/shared/buttons/letsContact/letsContact';
 
-import WebsitesImage from 'public/images/woman_with_phone.png';
-import WebappsImage from 'public/images/man_working_on_laptop.png';
+import WebsitesImage from 'public/images/shared/woman_with_phone.png';
+import WebappsImage from 'public/images/shared/man_working_on_laptop.png';
 
 const MyOffer = () => {
   const t = useTranslations('Offer');
