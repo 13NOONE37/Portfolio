@@ -11,8 +11,11 @@
   max-width: 28rem;
 }
 .title {
+  font-size: 24px !important;
+  hyphens: auto;
 }
 .description {
+  display: none;
   margin-top: 2rem;
   /* display: none; */
   position: relative;
@@ -34,6 +37,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
+  display: none;
 }
 .tag {
   border-radius: 10px;
@@ -42,13 +46,14 @@
   color: var(--color-white);
 }
 .cta {
+  display: none;
   margin-top: 1rem;
 }
 
 .image {
   width: 100%;
   border-radius: 10px;
-  border: 10px solid var(--color-grey-dark);
+  overflow: hidden;
   display: flex;
 }
 .image img {
@@ -56,7 +61,20 @@
   height: auto;
 }
 @media screen and (min-width: 520px) {
+  .title {
+    font-size: var(--fs-700) !important;
+  }
+  .description {
+    display: block;
+  }
+  .tags {
+    display: flex;
+  }
+  .image {
+    border: 10px solid var(--color-grey-dark);
+  }
   .cta {
+    display: flex;
     justify-self: flex-start;
   }
 }

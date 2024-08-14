@@ -7,14 +7,15 @@ import { PrimaryLink } from '@/components/buttons/primary/primary';
 import styles from './projectPreview.module.css';
 import fonts from '@/styles/fonts.module.css';
 import Tag from '@/components/shared/tag/tag';
+import { Image as ImageType } from 'contentlayer/generated';
+import { Link } from '@/utils/navigation';
 
 interface Props {
   title: string;
   description: ReactNode;
   tags: string[];
   slug: string;
-  imageSrc: string;
-  imageBlur?: string;
+  thumbnail: ImageType;
   rtl?: boolean;
 }
 const ProjectPreview = ({
@@ -22,8 +23,7 @@ const ProjectPreview = ({
   description,
   tags,
   slug,
-  imageSrc,
-  imageBlur,
+  thumbnail,
   rtl = false,
 }: Props) => {
   const t = useTranslations('Work');
@@ -49,19 +49,19 @@ const ProjectPreview = ({
           </PrimaryLink>
         </div>
       </div>
-      <div className={styles.image}>
+      <Link href={`/projects/${slug}`} className={styles.image}>
+        {/* <div className={styles.image}> */}
         <Image
-          src={imageSrc}
+          src={thumbnail.src}
           loading="lazy"
-          placeholder="empty"
-          // placeholder={'blur'}
-          // blurDataURL={imageBlur}
-          width={1920}
-          height={1080}
-          // fill
+          placeholder={'blur'}
+          blurDataURL={thumbnail.blurred}
+          width={thumbnail.width}
+          height={thumbnail.height}
           alt={`${t('screenshot_of_the')} ${title}`}
         />
-      </div>
+        {/* </div> */}
+      </Link>
     </div>
   );
 };

@@ -10,10 +10,15 @@ import SoInterestedBox from '@/components/shared/sections/soInterested/soInteres
 import { SecondaryLink } from '@/components/buttons/secondary/secondary';
 import ViewAllProjects from '@/components/shared/buttons/viewAllProjects/viewAllprojects';
 import ProjectPreview from './projectPreview/projectPreview';
+import { allProjects } from 'contentlayer/generated';
+import { getLocale, getTranslations } from 'next-intl/server';
 
-const MyWork = () => {
-  const t = useTranslations('Work');
-  const tShared = useTranslations('Shared');
+const MyWork = async () => {
+  const locale = await getLocale();
+  const t = await getTranslations('Work');
+  // const tShared = useTranslations('Shared');
+
+  const projects = allProjects.filter((item) => item.locale === locale);
 
   return (
     <section className={styles.projects} id={SECTION_IDS.projects}>
@@ -24,34 +29,20 @@ const MyWork = () => {
         {t.rich('my_work_description')}
       </SectionDescription>
       <ul className={styles.list}>
-        {[
-          {
-            title: 'Score managment system',
-            description:
-              'Lorem ipsum dolo lorem asdfasdf asdfasdf asdf asdfas sdafas fdasf asdf asfdasdfa asdfasdf asdfasdf asdfasdf asdf',
-            tags: ['TypeScript', 'Next.js', 'MySQL', 'Figma'],
-            slug: 'score-managment-system',
-          },
-          {
-            title: 'Score managment system',
-            description:
-              'Lorem ipsum dolo lorem asdfasdf asdfasdf asdf asdfas sdafas fdasf asdf asfdasdfa asdfasdf asdfasdf asdfasdf asdf',
-            tags: ['TypeScript', 'Next.js', 'MySQL', 'Figma'],
-            slug: 'score-managment-system',
-          },
-        ].map(({ title, description, tags, slug }, index) => (
-          <li className={styles['list--element']}>
-            <ProjectPreview
-              title={title}
-              description={description}
-              tags={tags}
-              slug={slug}
-              imageSrc="/images/projects/score-mangament-system/thumbnail.jpg"
-              imageBlur=""
-              rtl={!(index % 2 == 0)}
-            />
-          </li>
-        ))}
+        {projects.map(
+          ({ title, description, tags = [], slug, thumbnail }, index) => (
+            <li className={styles['list--element']}>
+              <ProjectPreview
+                title={title}
+                description={description}
+                tags={tags}
+                slug={slug}
+                thumbnail={thumbnail}
+                rtl={!(index % 2 == 0)}
+              />
+            </li>
+          ),
+        )}
       </ul>
       <div className={styles.viewAllProjects}>
         <ViewAllProjects />
