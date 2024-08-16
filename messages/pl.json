@@ -22,7 +22,8 @@
     "you_can_also_email_or_call_me": "You can also email or call me",
     "view_all_projects": "View all projects",
     "explore_more": "Explore more",
-    "go_to_home_page": "Go to home page"
+    "go_to_home_page": "Go to home page",
+    "visit_my_github": "Visit my Github"
   },
   "Home": {
     "my_name_is_oliwer": "Jestem <mark>Oliwer</mark>",
@@ -63,7 +64,6 @@
     "name_placeholder": "Anakin Skywalker",
     "email_placeholder": "anakin@sand.com",
     "message_placeholder": "Welcome...",
-    "visit_my_github": "Visit my Github",
     "contact_with_me_on_messenger": "Contact with me on messenger"
   },
   "Blog": {

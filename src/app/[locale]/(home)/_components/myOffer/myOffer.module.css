@@ -2,8 +2,7 @@
   padding: 0 var(--section-padding);
   margin: 4rem 0;
 }
-.heading {
-}
+
 .description {
   margin-top: 1rem;
 }
@@ -79,9 +78,4 @@
   .timeToBuild {
     margin-top: 6rem;
   }
-}
-@media screen and (min-width: 868px) {
-}
-
-@media screen and (min-width: 1240px) {
 }

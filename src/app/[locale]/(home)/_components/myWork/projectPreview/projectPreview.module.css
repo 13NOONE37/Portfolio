@@ -10,13 +10,13 @@
   max-width: 28rem;
 }
 .title {
-  font-size: 24px !important;
+  font-size: clamp(18px, 4vw + 0.5rem, 24px) !important;
   hyphens: auto;
+  text-align: center;
 }
 .description {
   display: none;
   margin-top: 2rem;
-  /* display: none; */
   position: relative;
 }
 .description::before {
@@ -61,6 +61,7 @@
 }
 @media screen and (min-width: 520px) {
   .title {
+    text-align: left;
     font-size: var(--fs-700) !important;
   }
   .description {

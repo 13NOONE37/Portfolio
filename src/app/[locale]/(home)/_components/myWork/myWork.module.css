@@ -2,8 +2,7 @@
   padding: 0 var(--section-padding);
   margin: 4rem 0;
 }
-.heading {
-}
+
 .description {
   margin-top: 1rem;
 }
@@ -23,8 +22,7 @@
   flex-direction: column;
   gap: 4rem;
 }
-.list--element {
-}
+
 @media screen and (min-width: 768px) {
   .viewAllProjects {
     margin-top: 6rem;
@@ -32,9 +30,4 @@
   .interestedBox {
     margin-top: 6rem;
   }
-}
-@media screen and (min-width: 868px) {
-}
-
-@media screen and (min-width: 1240px) {
 }

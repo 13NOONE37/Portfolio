@@ -13,103 +13,40 @@ const Image = defineNestedType(() => ({
     blurred: { type: 'string', required: true },
   },
 }));
-const Artist = defineNestedType(() => ({
-  name: 'Artist',
+
+const ArtImage = defineNestedType(() => ({
+  name: 'ArtImage',
   fields: {
-    name: { type: 'string', required: true },
-    image: { type: 'nested', of: Image, required: true },
-  },
-}));
-const Hero = defineNestedType(() => ({
-  name: 'Hero',
-  fields: {
-    small: { type: 'nested', of: Image, required: true },
-    large: { type: 'nested', of: Image, required: true },
+    mobile: { type: 'nested', of: Image },
+    tablet: { type: 'nested', of: Image },
+    desktop: { type: 'nested', of: Image },
   },
 }));
 
-// export const Painting = defineDocumentType(() => {
-//   const date = new Date();
-//   const defaultTimestamp = date.getTime();
-//   return {
-//     name: 'Painting',
-//     filePathPattern: `**/*.mdx`,
-//     contentType: 'mdx',
-//     fields: {
-//       publishTimestamp: { type: 'number', default: defaultTimestamp },
-//       title: { type: 'string', required: true },
-//       year: { type: 'string', required: true },
-//       source: { type: 'string', required: true },
-//       artist: { type: 'nested', of: Artist, required: true },
-//       hero: { type: 'nested', of: Hero, required: true },
-//       thumbnail: {
-//         type: 'nested',
-//         of: Image,
-//         required: true,
-//       },
-//       gallery: {
-//         type: 'nested',
-//         of: Image,
-//         required: true,
-//       },
-//     },
-//     computedFields: {
-//       url: {
-//         type: 'string',
-//         resolve: (painting) => `paintings/${painting._raw.flattenedPath}`,
-//       },
-//     },
-//   };
-// });
-
-const getTimestamp = () => {
-  const date = new Date();
-  return date.getTime();
-};
 export const Project = defineDocumentType(() => {
-  const defaultTimestamp = getTimestamp();
-
   return {
-    name: 'Post',
+    name: 'Project',
     filePathPattern: `**/*.mdx`,
     contentType: 'mdx',
     fields: {
-      publishTimestamp: { type: 'number', default: defaultTimestamp },
+      publishAt: { type: 'date', required: true },
+      pinned: { type: 'boolean' },
       title: { type: 'string', required: true },
+      description: { type: 'string', required: true },
+      source: { type: 'string' },
+      tags: { type: 'list', of: { type: 'string' } },
+      live: { type: 'string' },
+      thumbnail: { type: 'nested', of: Image, required: true },
     },
     computedFields: {
-      url: {
+      slug: {
         type: 'string',
-        resolve: (project) => `posts/${project._raw.flattenedPath}`,
+        resolve: (project) => project._raw.flattenedPath.split('_')[1],
       },
-    },
-  };
-});
-
-export const Post = defineDocumentType(() => {
-  const defaultTimestamp = getTimestamp();
-
-  return {
-    name: 'Post',
-    filePathPattern: `**/*.mdx`,
-    contentType: 'mdx',
-    fields: {
-      publishTimestamp: { type: 'number', default: defaultTimestamp },
-      title: { type: 'string', required: true },
-      year: { type: 'string', required: true },
-      source: { type: 'string', required: true },
-      artist: { type: 'nested', of: Artist, required: true },
-      hero: { type: 'nested', of: Hero, required: true },
-      thumbnail: {
-        type: 'nested',
-        of: Image,
-        required: true,
-      },
-    },
-    computedFields: {
-      url: {
+      locale: {
         type: 'string',
-        resolve: (post) => `posts/${post._raw.flattenedPath}`,
+        resolve: (project) =>
+          project._raw.flattenedPath.split('_')[0].split('/')[1],
       },
     },
   };
@@ -117,6 +54,12 @@ export const Post = defineDocumentType(() => {
 
 export default makeSource({
   contentDirPath: 'content',
-  contentDirInclude: ['projects', 'posts'],
-  documentTypes: [Project, Post],
+  contentDirInclude: [
+    'projects',
+    // , 'posts'
+  ],
+  documentTypes: [
+    Project,
+    // , Post
+  ],
 });

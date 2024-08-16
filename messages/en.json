@@ -22,7 +22,10 @@
     "you_can_also_email_or_call_me": "You can also email or call me",
     "view_all_projects": "View all projects",
     "explore_more": "Explore more",
-    "go_to_home_page": "Go to home page"
+    "go_to_home_page": "Go to home page",
+    "visit_my_github": "Visit my Github",
+    "contact_with_me_on_messenger": "Contact with me on messenger",
+    "photo_source": "Photo source"
   },
   "Home": {
     "my_name_is_oliwer": "My name is <mark>Oliwer</mark>",
@@ -40,15 +43,20 @@
   },
   "Work": {
     "my_work": "My <br></br> <mark>work</mark>",
-    "my_work_description": "Explore some of my proudest achievements. Here, you'll find <important>impressive 3D websites</important> and <important>intuitive applications</important> designed to help my clients manage their businesses effectively."
+    "my_work_description": "Explore some of my proudest achievements. Here, you'll find <important>impressive 3D websites</important> and <important>intuitive applications</important> designed to help my clients manage their businesses effectively.",
+    "screenshot_of_the": "Screenshot of the",
+    "view_project": "View project"
   },
   "Offer": {
-    "my_offer": "My <br></br> offer",
+    "my_offer": "My <br></br> <mark>offer</mark>",
     "my_offer_description": "<important>I’ll bring your ideas to life from scratch</important>, using fast, modern technologies that ensure reliability and future-proof your application with easy scalability.",
     "websites": "Websites",
     "websites_description": "Whether you need a striking landing page, a personal site, a blog, or an e-commerce platform, I build engaging websites that showcase your brand and provide an exceptional user experience.",
+    "websites_photo_alt": "Woman enjoying cofee and scrolling her phone",
+
     "webapps": "Webapps",
-    "webapps_description": "From intuitive management panels to tailored IT solutions, I create web applications that streamline operations and address your unique needs with user-friendly designs."
+    "webapps_description": "From intuitive management panels to tailored IT solutions, I create web applications that streamline operations and address your unique needs with user-friendly designs.",
+    "webapps_photo_alt": "Man working on a laptop"
   },
   "Contact": {
     "contact_me": "Contact <br></br> <mark>me</mark>",
@@ -62,9 +70,7 @@
     "email_is_invalid": "Email is invalid",
     "name_placeholder": "Arthur Morgan",
     "email_placeholder": "arthurmorgan@gmail.com",
-    "message_placeholder": "Hello, I need a website for my company...",
-    "visit_my_github": "Visit my Github",
-    "contact_with_me_on_messenger": "Contact with me on messenger"
+    "message_placeholder": "Hello, I need a website for my company..."
   },
   "Blog": {
     "my_blog": "My blog",

@@ -15,9 +15,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    padding: 2rem;
-  }
   .skills {
     margin-top: 2rem;
 
@@ -25,5 +22,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  .container {
+    padding: 1.5rem;
   }
 }

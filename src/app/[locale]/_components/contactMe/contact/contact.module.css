@@ -9,6 +9,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 .link {
   text-decoration: none;
@@ -16,6 +18,9 @@
   z-index: 2;
   color: var(--color-white);
   padding: 0.25rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .link::before {
   content: '';

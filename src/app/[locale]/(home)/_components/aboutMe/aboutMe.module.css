@@ -15,11 +15,13 @@
 }
 
 @media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 868px) {
   .boxes {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: unset;
+  }
+}
+@media screen and (min-width: 868px) {
+  .boxes {
     gap: 2rem;
   }
 }
