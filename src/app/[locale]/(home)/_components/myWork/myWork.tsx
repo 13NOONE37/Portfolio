@@ -17,9 +17,8 @@ const MyWork = async () => {
   const locale = await getLocale();
   const t = await getTranslations('Work');
   // const tShared = useTranslations('Shared');
-
   const projects = allProjects.filter((item) => item.locale === locale);
-
+  console.log(allProjects);
   return (
     <section className={styles.projects} id={SECTION_IDS.projects}>
       <SectionHeading className={styles.heading}>

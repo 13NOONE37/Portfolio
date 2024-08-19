@@ -23,12 +23,12 @@
 }
 .subheading {
   text-transform: uppercase;
-  font-size: 16px;
-  color: var(--color-primary);
+  font-size: 16px !important;
+  color: var(--color-primary) !important;
   grid-area: subheading;
 }
 .heading {
-  font-size: 32px;
+  font-size: 32px !important;
   grid-area: heading;
 }
 .block {
@@ -179,12 +179,11 @@
 
   .subheading {
     text-transform: uppercase;
-    font-size: clamp(var(--fs-500), 1vw + 1rem, var(--fs-700));
-    color: var(--color-primary);
+    font-size: clamp(var(--fs-500), 1vw + 1rem, var(--fs-700)) !important;
     grid-area: subheading;
   }
   .heading {
-    font-size: clamp(var(--fs-700), 5vw + 1rem, var(--fs-900));
+    font-size: clamp(var(--fs-700), 5vw + 1rem, var(--fs-900)) !important;
   }
   .arrow {
     display: block;

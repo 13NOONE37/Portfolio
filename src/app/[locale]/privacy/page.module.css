@@ -4,5 +4,5 @@
 .article {
   margin: auto;
   margin-top: var(--section-padding);
-  max-width: var(--article-width);
+  width: min(100%, var(--article-width));
 }

@@ -7,4 +7,5 @@
   width: min(100%, var(--section-width));
   height: 100%;
   margin: auto;
+  overflow-x: hidden;
 }

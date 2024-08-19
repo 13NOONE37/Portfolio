@@ -26,7 +26,7 @@ const ArtImage = defineNestedType(() => ({
 export const Project = defineDocumentType(() => {
   return {
     name: 'Project',
-    filePathPattern: `**/*.mdx`,
+    filePathPattern: `projects/*/*.mdx`,
     contentType: 'mdx',
     fields: {
       publishAt: { type: 'date', required: true },
@@ -41,12 +41,11 @@ export const Project = defineDocumentType(() => {
     computedFields: {
       slug: {
         type: 'string',
-        resolve: (project) => project._raw.flattenedPath.split('_')[1],
+        resolve: (project) => project._raw.flattenedPath.split('/')[1],
       },
       locale: {
         type: 'string',
-        resolve: (project) =>
-          project._raw.flattenedPath.split('_')[0].split('/')[1],
+        resolve: (project) => project._raw.flattenedPath.split('/')[2],
       },
     },
   };
@@ -54,7 +53,7 @@ export const Project = defineDocumentType(() => {
 export const Attachment = defineDocumentType(() => {
   return {
     name: 'Attachment',
-    filePathPattern: `**/*.mdx`,
+    filePathPattern: `attachments/*/*.mdx`,
     contentType: 'mdx',
     fields: {},
     computedFields: {
@@ -64,8 +63,7 @@ export const Attachment = defineDocumentType(() => {
       },
       locale: {
         type: 'string',
-        resolve: (attachment) =>
-          attachment._raw.flattenedPath.split('_')[0].split('/')[1],
+        resolve: (attachment) => attachment._raw.flattenedPath.split('/')[2],
       },
     },
   };
@@ -78,6 +76,7 @@ export default makeSource({
     'attachments',
     // , 'posts'
   ],
+
   documentTypes: [
     Project,
     Attachment,
