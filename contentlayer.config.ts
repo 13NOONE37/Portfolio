@@ -51,15 +51,36 @@ export const Project = defineDocumentType(() => {
     },
   };
 });
+export const Attachment = defineDocumentType(() => {
+  return {
+    name: 'Attachment',
+    filePathPattern: `**/*.mdx`,
+    contentType: 'mdx',
+    fields: {},
+    computedFields: {
+      name: {
+        type: 'string',
+        resolve: (attachment) => attachment._raw.flattenedPath.split('/')[1],
+      },
+      locale: {
+        type: 'string',
+        resolve: (attachment) =>
+          attachment._raw.flattenedPath.split('_')[0].split('/')[1],
+      },
+    },
+  };
+});
 
 export default makeSource({
   contentDirPath: 'content',
   contentDirInclude: [
     'projects',
+    'attachments',
     // , 'posts'
   ],
   documentTypes: [
     Project,
+    Attachment,
     // , Post
   ],
 });

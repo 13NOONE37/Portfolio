@@ -78,7 +78,7 @@ const Nav = () => {
         </ul>
       </nav>
 
-      <div className={cx(styles.lang, fonts.body__small)}>
+      <div className={cx(styles.lang, fonts.body__thick__small)}>
         <Link
           href={pathname}
           locale="en"

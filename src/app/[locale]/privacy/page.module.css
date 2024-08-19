@@ -1,0 +1,8 @@
+.container {
+  padding: calc(2 * var(--section-padding)) var(--section-padding);
+}
+.article {
+  margin: auto;
+  margin-top: var(--section-padding);
+  max-width: var(--article-width);
+}

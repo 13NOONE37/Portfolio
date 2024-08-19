@@ -8,14 +8,14 @@
   color: var(--color-white);
 }
 .heading_600 {
-  font-size: clamp(var(--fs-500), 3vw + 1rem, var(--fs-800));
+  font-size: clamp(var(--fs-600), 3vw + 1rem, var(--fs-800));
   font-weight: var(--fw-bold);
   line-height: 1.5;
 
   color: var(--color-white);
 }
 .heading_500 {
-  font-size: var(--fs-700);
+  font-size: clamp(var(--fs-500), 3vw + 1rem, var(--fs-700));
   font-weight: var(--fw-bold);
   line-height: 1.25;
 
@@ -67,13 +67,20 @@
 
 .body {
   font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  line-height: 1.66;
+
+  color: var(--color-grey-light);
+}
+.body__thick {
+  font-size: var(--fs-400);
   font-weight: var(--fw-medium);
   line-height: 1.75;
 
   color: var(--color-grey-light);
 }
 
-.body__small {
+.body__thick__small {
   font-size: var(--fs-200);
   font-weight: var(--fw-medium);
   line-height: 1.75;

@@ -13,7 +13,10 @@ export function generateStaticParams() {
   return LANGUAGES.map((locale) => ({ locale }));
 }
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500'] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['700', '600', '500', '400'],
+});
 
 export const metadata: Metadata = {
   title: 'Oliwer Klauze',

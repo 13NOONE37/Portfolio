@@ -14,12 +14,12 @@ export default function Home({
   unstable_setRequestLocale(locale);
 
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <Hero />
       <AboutMe />
       <MyWork />
       <MyOffer />
       <ContactMe />
-    </main>
+    </div>
   );
 }

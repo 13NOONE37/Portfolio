@@ -1,0 +1,31 @@
+.goBack {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: var(--color-grey-dark);
+
+  display: grid;
+  place-items: center;
+
+  width: 50px;
+  height: 50px;
+}
+.button svg {
+  fill: var(--color-white);
+}
+.label {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 0.2s var(--transition-button_1);
+  transition-property: opacity, transform;
+}
+.button:hover + .label {
+  opacity: 1;
+  transform: translateX(0%);
+}

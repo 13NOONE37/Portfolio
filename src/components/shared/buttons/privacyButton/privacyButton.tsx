@@ -10,7 +10,7 @@ const PrivacyButton = ({ className }: { className?: string }) => {
   return (
     <Link
       href={'/privacy'}
-      className={cx(fonts.body__small, styles.privacy, className)}
+      className={cx(fonts.body__thick__small, styles.privacy, className)}
     >
       {t('privacy_policy')}
     </Link>

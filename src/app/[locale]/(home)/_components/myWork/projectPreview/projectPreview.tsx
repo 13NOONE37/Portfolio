@@ -32,7 +32,9 @@ const ProjectPreview = ({
       <div className={styles.text}>
         <div className={styles['text--content']}>
           <h3 className={cx(fonts.heading_500, styles.title)}>{title}</h3>
-          <p className={cx(fonts.body, styles.description)}>{description}</p>
+          <p className={cx(fonts.body__thick, styles.description)}>
+            {description}
+          </p>
           <ul className={styles.tags}>
             {tags.map((tag) => (
               <li>

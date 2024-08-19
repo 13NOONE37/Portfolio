@@ -57,7 +57,7 @@ const MyOffer = () => {
             <h2 className={cx(fonts.heading_500, styles['list--title'])}>
               {item.title}
             </h2>
-            <p className={cx(fonts.body, styles['list--description'])}>
+            <p className={cx(fonts.body__thick, styles['list--description'])}>
               {item.description}
             </p>
             <div className={styles['list--cta']}>

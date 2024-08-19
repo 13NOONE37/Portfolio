@@ -25,7 +25,8 @@
     "go_to_home_page": "Go to home page",
     "visit_my_github": "Visit my Github",
     "contact_with_me_on_messenger": "Contact with me on messenger",
-    "photo_source": "Photo source"
+    "photo_source": "Photo source",
+    "back": "Back"
   },
   "Home": {
     "my_name_is_oliwer": "My name is <mark>Oliwer</mark>",

@@ -12,7 +12,9 @@ const SectionDescription = ({
   className?: string;
 }) => {
   return (
-    <p className={cx(fonts.body, styles.paragraph, className)}>{children}</p>
+    <p className={cx(fonts.body__thick, styles.paragraph, className)}>
+      {children}
+    </p>
   );
 };
 

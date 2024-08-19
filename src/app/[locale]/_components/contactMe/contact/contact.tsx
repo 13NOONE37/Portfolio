@@ -16,14 +16,14 @@ const Contact = ({ className }: { className?: string }) => {
       <h3 className={fonts.heading_500}>{t('contact_heading')}</h3>
 
       <Link
-        className={cx(fonts.body, styles.link)}
+        className={cx(fonts.body__thick, styles.link)}
         href={`mailto:${personalInformations.email}`}
       >
         {personalInformations.email}
       </Link>
 
       <Link
-        className={cx(fonts.body, styles.link)}
+        className={cx(fonts.body__thick, styles.link)}
         href={`tel:${personalInformations.phone}`}
       >
         {personalInformations.phone}

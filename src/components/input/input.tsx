@@ -35,7 +35,7 @@ const Input: FC<InputProps> = ({
         <div className={cx(fonts.button__text, styles.error)}>{error[0]}</div>
       )}
       <input
-        className={cx(styles.input, fonts.body, className)}
+        className={cx(styles.input, fonts.body__thick, className)}
         type={type}
         placeholder={placeholder}
         name={name}
@@ -73,7 +73,7 @@ const Textarea: FC<TextareaProps> = ({
       <textarea
         className={cx(
           styles.input,
-          fonts.body,
+          fonts.body__thick,
           styles.input__textarea,
           className,
         )}

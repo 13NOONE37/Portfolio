@@ -25,13 +25,13 @@ const Footer = () => {
           <Logo />
         </Link>
 
-        <div className={cx(fonts.body, styles.contact)}>
+        <div className={cx(fonts.body__thick, styles.contact)}>
           <ContactButton />
         </div>
 
         <PrivacyButton className={styles.privacy} />
 
-        <span className={cx(fonts.body__small, styles.goodbye)}>
+        <span className={cx(fonts.body__thick__small, styles.goodbye)}>
           {t.rich('made_with')}
         </span>
       </div>
