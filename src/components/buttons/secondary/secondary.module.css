@@ -13,6 +13,7 @@
   transition: transform 0.2s var(--transition-button_1),
     border 0.2s var(--transition-button_1);
   transform-origin: center;
+  pointer-events: none;
 }
 .top_left {
   top: 0;
