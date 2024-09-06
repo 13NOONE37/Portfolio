@@ -13,8 +13,8 @@ import SectionHeading from '../../../_components/textComponents/sectionHeading/s
 import TimeToBuildProject from '../../../../../components/shared/sections/timeToBuildProject/timeToBuildProject';
 import LetsContact from '@/components/shared/buttons/letsContact/letsContact';
 
-import WebsitesImage from 'public/images/shared/woman_with_phone.png';
-import WebappsImage from 'public/images/shared/man_working_on_laptop.png';
+import WebsitesImage from 'public/images/shared/woman_with_phone.jpg';
+import WebappsImage from 'public/images/shared/man_working_on_laptop.jpg';
 
 const MyOffer = () => {
   const t = useTranslations('Offer');
@@ -43,7 +43,7 @@ const MyOffer = () => {
   ];
 
   return (
-    <section className={styles.projects} id={SECTION_IDS.offer}>
+    <section className={styles.offer} id={SECTION_IDS.offer}>
       <SectionHeading className={styles.heading}>
         {t.rich('my_offer')}
       </SectionHeading>
@@ -54,22 +54,26 @@ const MyOffer = () => {
       <ul className={styles.list}>
         {list.map((item) => (
           <li key={item.title} className={styles['list--element']}>
-            <h2 className={cx(fonts.heading_500, styles['list--title'])}>
-              {item.title}
-            </h2>
-            <p className={cx(fonts.body__thick, styles['list--description'])}>
-              {item.description}
-            </p>
-            <div className={styles['list--cta']}>
-              <LetsContact />
-            </div>
             <Image
-              className={styles['list--image']}
+              className={styles['element--image']}
               src={item.image}
               alt={`${item.image_alt} | ${item.author}`}
               loading="lazy"
               placeholder="blur"
             />
+            <div className={styles.content}>
+              <h2 className={cx(fonts.heading_500, styles['content--title'])}>
+                {item.title}
+              </h2>
+              <p
+                className={cx(
+                  fonts.body__thick,
+                  styles['content--description'],
+                )}
+              >
+                {item.description}
+              </p>
+            </div>
           </li>
         ))}
       </ul>
