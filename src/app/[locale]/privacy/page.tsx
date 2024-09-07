@@ -14,7 +14,7 @@ import {
   MDX_TextBlock,
   MDX_UL,
 } from '@/components/blogComponents/mdxComponents/mdxComponents';
-import ContactMe from '../_components/contactMe/contactMe';
+import ContactMe from '../_components/contactSection/contactSection';
 
 export default function Privacy({
   params: { locale },
