@@ -12,6 +12,7 @@
 :root {
   --color-dark: rgb(22, 23, 25);
   --color-dark-alpha_95: rgba(22, 23, 25, 0.95);
+  --color-dark-alpha_80: rgba(22, 23, 25, 0.8);
 
   --color-white: #ffffff;
   --color-light: #f0f0f0;
@@ -21,7 +22,6 @@
   --color-grey-dark-light: #2d2e30;
 
   --color-grey-light: #989898;
-
   --color-primary_darker: #ce2239;
   --color-primary_darker_hover: #9a192a;
   --color-primary: #ef253c;
