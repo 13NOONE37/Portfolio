@@ -26,7 +26,9 @@
     "visit_my_github": "Visit my Github",
     "contact_with_me_on_messenger": "Contact with me on messenger",
     "photo_source": "Photo source",
-    "back": "Back"
+    "back": "Back",
+    "source_code": "Source code",
+    "watch_live": "Watch live"
   },
   "Home": {
     "my_name_is_oliwer": "My name is <mark>Oliwer</mark>",
