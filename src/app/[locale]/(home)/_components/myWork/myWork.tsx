@@ -18,7 +18,7 @@ const MyWork = async () => {
   const t = await getTranslations('Work');
   // const tShared = useTranslations('Shared');
   const projects = allProjects.filter((item) => item.locale === locale);
-  console.log(allProjects);
+
   return (
     <section className={styles.projects} id={SECTION_IDS.projects}>
       <SectionHeading className={styles.heading}>
@@ -29,11 +29,11 @@ const MyWork = async () => {
       </SectionDescription>
       <ul className={styles.list}>
         {projects.map(
-          ({ title, description, tags = [], slug, thumbnail }, index) => (
+          ({ title, short_description, tags = [], slug, thumbnail }, index) => (
             <li className={styles['list--element']}>
               <ProjectPreview
                 title={title}
-                description={description}
+                description={short_description}
                 tags={tags}
                 slug={slug}
                 thumbnail={thumbnail}
