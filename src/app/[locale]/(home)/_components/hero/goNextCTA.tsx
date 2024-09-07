@@ -3,8 +3,6 @@ import React from 'react';
 import { SECTION_IDS } from '@/app/section_ids';
 import scrollToId from '@/utils/scrollToId';
 import styles from './hero.module.css';
-import ArrowIcon from '@/assets/icons/arrow';
-import ArrowEndIcon from '@/assets/icons/arrowEnd';
 
 const GoNextCTA = () => {
   return (
@@ -14,7 +12,7 @@ const GoNextCTA = () => {
         scrollToId(SECTION_IDS.about);
       }}
     >
-      <ArrowEndIcon />
+      <div className={styles['cta--circle']} />
     </button>
   );
 };
