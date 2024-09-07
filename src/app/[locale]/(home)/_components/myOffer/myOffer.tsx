@@ -11,7 +11,6 @@ import fonts from '@/styles/fonts.module.css';
 import SectionDescription from '../../../_components/textComponents/sectionDescription/sectionDescription';
 import SectionHeading from '../../../_components/textComponents/sectionHeading/sectionHeading';
 import TimeToBuildProject from '../../../../../components/shared/sections/timeToBuildProject/timeToBuildProject';
-import LetsContact from '@/components/shared/buttons/letsContact/letsContact';
 
 import WebsitesImage from 'public/images/shared/woman_with_phone.jpg';
 import WebappsImage from 'public/images/shared/man_working_on_laptop.jpg';
@@ -24,7 +23,7 @@ const MyOffer = () => {
     {
       author: `${tShared(
         'photo_source',
-      )} https://unsplash.com/@guilhermestecanella?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash`,
+      )} https://www.pexels.com/pl-pl/zdjecie/kobieta-ubrana-w-fioletowa-koszule-trzymajac-smartfon-bialy-siedzi-na-krzesle-826349/`,
 
       title: t('websites'),
       description: t('websites_description'),
@@ -34,7 +33,7 @@ const MyOffer = () => {
     {
       author: `${t('webapps_photo_alt')} | ${tShared(
         'photo_source',
-      )} https://unsplash.com/@agefis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash`,
+      )} https://www.pexels.com/pl-pl/zdjecie/mezczyzna-przed-swoim-laptopem-3184461/`,
       title: t('webapps'),
       description: t('webapps_description'),
       image: WebappsImage,
