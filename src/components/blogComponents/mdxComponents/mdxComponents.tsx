@@ -2,6 +2,7 @@ import React, { AnchorHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
 import cx from 'classnames';
 import fonts from '@/styles/fonts.module.css';
 import styles from './mdxComponents.module.css';
+import Image from 'next/image';
 
 const MDX_H1 = ({ children }: { children: ReactNode }) => {
   return <h1 className={cx(styles.h1, fonts.heading_600)}>{children}</h1>;
@@ -59,6 +60,31 @@ const MDX_TextBlock = ({
     </div>
   );
 };
+const MDX_Image = ({
+  src,
+  alt,
+  blurred,
+  width,
+  height,
+}: {
+  src: string;
+  alt: string;
+  blurred: string;
+  width: number;
+  height: number;
+}) => {
+  return (
+    <Image
+      className={styles.image}
+      src={src}
+      alt={alt}
+      placeholder="blur"
+      blurDataURL={blurred}
+      width={width}
+      height={height}
+    />
+  );
+};
 export {
   MDX_H1,
   MDX_H2,
@@ -68,4 +94,5 @@ export {
   MDX_A,
   MDX_Section,
   MDX_TextBlock,
+  MDX_Image,
 };
