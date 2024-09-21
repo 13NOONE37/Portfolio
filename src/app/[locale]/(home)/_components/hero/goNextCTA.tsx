@@ -9,7 +9,7 @@ const GoNextCTA = () => {
     <button
       className={styles.cta}
       onClick={() => {
-        scrollToId(SECTION_IDS.about);
+        scrollToId(SECTION_IDS.about, 120);
       }}
     >
       <div className={styles['cta--circle']} />

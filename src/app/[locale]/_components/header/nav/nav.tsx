@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import cx from 'classnames';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { Link, usePathname } from '@/utils/navigation';
+import { Link, usePathname, useRouter } from '@/utils/navigation';
 import { SecondaryButton } from '@/components/buttons/secondary/secondary';
 import Hamburger from '../hamburger/hamburger';
 
@@ -24,8 +24,11 @@ const Nav = () => {
     setShowMenu(false);
   });
 
+  const router = useRouter();
   const handleLinkElement = (id: string) => {
-    scrollToId(id);
+    scrollToId(id, 120, () => {
+      router.push(`/#${id}`);
+    });
     setShowMenu(false);
   };
 

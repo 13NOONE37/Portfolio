@@ -1,6 +1,7 @@
 .projects {
   padding: 0 var(--section-padding);
   margin: 4rem 0;
+  margin-top: 8rem;
 }
 
 .description {

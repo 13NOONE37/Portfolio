@@ -12,7 +12,7 @@ const ContactButton = () => {
   return (
     <SecondaryButton
       onClick={() => {
-        scrollToId(SECTION_IDS.contact, undefined, () => {
+        scrollToId(SECTION_IDS.contact, 120, () => {
           router.push('/#contact');
         });
       }}

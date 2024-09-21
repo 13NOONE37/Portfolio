@@ -3,13 +3,13 @@ import React from 'react';
 import { SECTION_IDS } from '@/app/section_ids';
 import SectionHeading from '../textComponents/sectionHeading/sectionHeading';
 
-import styles from './contactMe.module.css';
+import styles from './contactSection.module.css';
 import fonts from '@/styles/fonts.module.css';
 import SectionSubHeading from '../textComponents/sectionSubHeading/sectionSubHeading';
 import ContactForm from './contactForm/contactForm';
 import Contact from './contact/contact';
 
-const ContactMe = () => {
+const ContactSection = () => {
   const t = useTranslations('Contact');
   const tShared = useTranslations('Shared');
 
@@ -30,4 +30,4 @@ const ContactMe = () => {
   );
 };
 
-export default ContactMe;
+export default ContactSection;

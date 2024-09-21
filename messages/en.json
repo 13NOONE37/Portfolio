@@ -38,11 +38,13 @@
     "reality": "reality"
   },
   "About": {
-    "my_abilites": "My <br></br> <mark>abilities</mark>",
-    "my_abilities_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important> with a strong focus on front-end technologies. Below, you can explore my skillset.",
+    "about_me": "About <br></br> <mark>me</mark>",
+    "about_me_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important> with a strong focus on front-end technologies. Below, you can explore my skillset.",
     "frontend_development": "Frontend Development",
     "backend_development": "Backend Development",
-    "tools_and_technologies": "Tools and Technologies"
+    "tools_and_technologies": "Tools and Technologies",
+    "scrollUpDown": "scroll up/down ...",
+    "scrollRightLeft": "scroll right/left ..."
   },
   "Work": {
     "my_work": "My <br></br> <mark>work</mark>",

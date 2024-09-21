@@ -118,6 +118,7 @@ function MyScene() {
   return (
     <animated.group
       onPointerMove={onPointerMove}
+      onPointerDown={onPointerMove}
       rotation={cardRotation as any}
     >
       <mesh position={[0, 0, -0.3]}>
@@ -266,52 +267,4 @@ function Heading3D({ text, size = 0.8 }: { text: string; size: number }) {
   );
 }
 
-// function Letter({ char, size }: { char: string; size: number }) {
-//   const [springs, api] = useSpring(
-//     () => ({
-//       rotation: [0, 0, 0],
-//       config: {
-//         mass: 1,
-//         tension: 150,
-//         friction: 50,
-//       },
-//     }),
-//     [],
-//   );
-//   const handlePointerOver = () => {
-//     api.start({
-//       rotation: [2 * Math.PI, 0, 0],
-//     });
-//   };
-//   const handlePointerOut = () => {
-//     api.start({
-//       rotation: [2 * 1.00001 * Math.PI, 0, 0],
-//       onRest: () => {
-//         api.start({
-//           rotation: [0, 0, 0],
-//         });
-//       },
-//     });
-//   };
-
-//   return (
-//     <animated.group
-//       rotation={springs.rotation as any}
-//       onPointerOver={handlePointerOver}
-//       onPointerOut={handlePointerOut}
-//     >
-//       <Center>
-//         <Text3D
-//           size={1}
-//           font={'/Poppins_Bold_all.json'}
-//           height={0.15}
-//           curveSegments={12}
-//         >
-//           {char}
-//           <meshStandardMaterial color={'#ffffff'} />
-//         </Text3D>
-//       </Center>
-//     </animated.group>
-//   );
-// }
 export default HeroScene3D;
