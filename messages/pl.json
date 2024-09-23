@@ -1,29 +1,34 @@
 {
   "Header": {
-    "about": "About",
-    "projects": "Projects",
-    "offer": "Offer",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "offer": "Oferta",
     "blog": "Blog",
-    "contact_me": "Contact me",
-    "change_language_to_english": "Zmień język na Angielski",
-    "change_language_to_polish": "Zmień język na Polski"
+    "contact_me": "Kontakt",
+    "change_language_to_english": "Zmień język na angielski",
+    "change_language_to_polish": "Zmień język na polski"
   },
+
   "Footer": {
     "made_with": "Prawa autorskie © <year></year> Oliwer Klauze."
   },
   "Shared": {
-    "lets_contact": "Let's contact!",
-    "so_interested": "So, <mark>interested?</mark>",
-    "its_time_to_build_product_your_clients_will_love": "It’s time to <mark>build product</mark> your clients will love!",
-    "contact_me": "Contact me!",
+    "lets_contact": "Skontaktujmy się!",
+    "so_interested": "I jak, <mark>zainteresowany?</mark>",
+    "its_time_to_build_product_your_clients_will_love": "Czas <mark>zbudować</mark> produkt,<br></br> który pokochają Twoi klienci!",
+    "contact_me": "Napisz do mnie!",
     "lets_create_something_together": "<mark>Zbudujmy</mark> coś razem!",
     "privacy_policy": "Polityka prywatności",
-    "feel_free_to_connect_with_me_on_social": "Feel free to conect with me on social",
-    "you_can_also_email_or_call_me": "You can also email or call me",
-    "view_all_projects": "View all projects",
-    "explore_more": "Explore more",
-    "go_to_home_page": "Go to home page",
-    "visit_my_github": "Visit my Github"
+    "you_can_also_email_or_call_me": "Możesz również napisać do mnie e-maila lub zadzwonić",
+    "view_all_projects": "Zobacz wszystkie projekty",
+    "explore_more": "Odkryj więcej",
+    "go_to_home_page": "Przejdź do strony głównej",
+    "visit_my_github": "Odwiedź mój Github",
+    "contact_with_me_on_messenger": "Skontaktuj się ze mną przez Messenger",
+    "photo_source": "Źródło zdjęcia",
+    "back": "Wróć",
+    "source_code": "Kod źródłowy",
+    "watch_live": "Zobacz na żywo"
   },
   "Home": {
     "my_name_is_oliwer": "Jestem <mark>Oliwer</mark>",
@@ -33,41 +38,43 @@
     "reality": "rzeczywistość"
   },
   "About": {
-    "my_abilites": "My <br></br> abilities",
-    "my_abilities_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important> with a strong focus on front-end technologies. Below, you can explore my skillset.",
-    "frontend_development": "Frontend Development",
-    "backend_development": "Backend Development",
-    "tools_and_technologies": "Tools and Technologies"
+    "about_me": "O <br></br> <mark>mnie</mark>",
+    "about_me_description": "Cześć, nazywam się <important>Oliwer Klauze</important> i jestem <important>Full Stack Developerem</important> z naciskiem na technologie front-endowe. Poniżej możesz zapoznać się z używanymi przeze mnie technologiami.",
+    "scrollUpDown": "Przewijaj w górę/dół ...",
+    "scrollRightLeft": "Przewijaj w prawo/lewo ..."
   },
   "Work": {
-    "my_work": "My <br></br> work",
-    "my_work_description": "Explore some of my proudest achievements. Here, you'll find <important>impressive 3D websites</important> and <important>intuitive applications</important> designed to help my clients manage their businesses effectively."
+    "my_work": "Moje <br></br> <mark>projekty</mark>",
+    "my_work_description": "Poznaj niektóre z moich najciekawszych projektów. Znajdziesz tu zarówno <important>imponujące strony internetowe</important> jak i <important>intuicyjne aplikacje</important>, które pomagają moim klientom efektywnie zarządzać ich biznesami.",
+    "screenshot_of_the": "Zrzut ekranu z",
+    "view_project": "Zobacz projekt"
   },
   "Offer": {
-    "my_offer": "My <br></br> offer",
-    "my_offer_description": "<important>I’ll bring your ideas to life from scratch</important>, using fast, modern technologies that ensure reliability and future-proof your application with easy scalability.",
-    "websites": "Websites",
-    "websites_description": "Whether you need a striking landing page, a personal site, a blog, or an e-commerce platform, I build engaging websites that showcase your brand and provide an exceptional user experience.",
-    "webapps": "Webapps",
-    "webapps_description": "From intuitive management panels to tailored IT solutions, I create web applications that streamline operations and address your unique needs with user-friendly designs."
+    "my_offer": "Moja <br></br> <mark>oferta</mark>",
+    "my_offer_description": "<important>Zrealizuję Twoje pomysły od zera</important>, wykorzystując nowoczesne i szybkie technologie, które zapewniają niezawodność i przyszłościowość Twojej aplikacji, umożliwiając łatwe skalowanie.",
+    "websites": "Strony internetowe",
+    "websites_description": "Niezależnie od tego, czy potrzebujesz strony startowej dla swojego buisnessu, osobistej witryny, bloga czy platformy e-commerce, tworzę angażujące strony internetowe, które prezentują Twoją markę i zapewniają doskonałe doświadczenia użytkowników.",
+    "websites_photo_alt": "Kobieta przeglądająca telefon",
+    "webapps": "Aplikacje internetowe",
+    "webapps_description": "Od intuicyjnych paneli zarządzania po specyficzne rozwiązania IT – tworzę aplikacje internetowe, które usprawniają operacje i odpowiadają na Twoje unikalne potrzeby dzięki przyjaznemu interfejsowi.",
+    "webapps_photo_alt": "Mężczyzna pracujący na laptopie"
   },
   "Contact": {
     "contact_me": "<mark>Kontakt</mark>",
-    "contact_form": "Contact form",
-    "your_name": "Your name",
-    "your_email": "Your email",
-    "your_message": "Your message",
-    "send_message": "Send message",
-    "contact_heading": "Contact Me Via:",
-    "this_field_is_required": "This field is required",
-    "email_is_invalid": "Email is invalid",
-    "name_placeholder": "Anakin Skywalker",
-    "email_placeholder": "anakin@sand.com",
-    "message_placeholder": "Welcome...",
-    "contact_with_me_on_messenger": "Contact with me on messenger"
+    "contact_form": "Formularz kontaktowy",
+    "your_name": "Twoje imię",
+    "your_email": "Twój email",
+    "your_message": "Twoja wiadomość",
+    "send_message": "Wyślij wiadomość",
+    "contact_heading": "Skontaktuj się ze mną przez:",
+    "this_field_is_required": "To pole jest wymagane",
+    "email_is_invalid": "Email jest nieprawidłowy",
+    "name_placeholder": "Tomasz Nowak",
+    "email_placeholder": "tomasznowak@gmail.com",
+    "message_placeholder": "Cześć, potrzebuję strony startowej dla mojego produktu.Czy możemy się umówić na rozmowę?"
   },
   "Blog": {
-    "my_blog": "My blog",
-    "my_blog_description": "I share my thoughts here. You'll find my opinions on social and IT issues. Below you can see selected posts!"
+    "my_blog": "Mój blog",
+    "my_blog_description": "Tutaj dzielę się swoimi przemyśleniami. Znajdziesz moje opinie na tematy społeczne i technologiczne. Poniżej możesz zobaczyć wybrane wpisy!"
   }
 }

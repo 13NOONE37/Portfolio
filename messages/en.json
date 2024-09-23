@@ -18,7 +18,6 @@
     "contact_me": "Contact me!",
     "lets_create_something_together": "Let’s <mark>create</mark> something together!",
     "privacy_policy": "Privacy policy",
-    "feel_free_to_connect_with_me_on_social": "Feel free to conect with me on social",
     "you_can_also_email_or_call_me": "You can also email or call me",
     "view_all_projects": "View all projects",
     "explore_more": "Explore more",
@@ -40,9 +39,6 @@
   "About": {
     "about_me": "About <br></br> <mark>me</mark>",
     "about_me_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important> with a strong focus on front-end technologies. Below, you can explore my skillset.",
-    "frontend_development": "Frontend Development",
-    "backend_development": "Backend Development",
-    "tools_and_technologies": "Tools and Technologies",
     "scrollUpDown": "scroll up/down ...",
     "scrollRightLeft": "scroll right/left ..."
   },
