@@ -23,12 +23,14 @@
     "view_all_projects": "Zobacz wszystkie projekty",
     "explore_more": "Odkryj więcej",
     "go_to_home_page": "Przejdź do strony głównej",
+    "go_back_home_page": "Wróć na stronę główną",
     "visit_my_github": "Odwiedź mój Github",
     "contact_with_me_on_messenger": "Skontaktuj się ze mną przez Messenger",
     "photo_source": "Źródło zdjęcia",
     "back": "Wróć",
     "source_code": "Kod źródłowy",
-    "watch_live": "Zobacz na żywo"
+    "watch_live": "Zobacz na żywo",
+    "not_found": "Taka strona nie istnieje!"
   },
   "Home": {
     "my_name_is_oliwer": "Jestem <mark>Oliwer</mark>",

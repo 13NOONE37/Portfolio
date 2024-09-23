@@ -22,12 +22,14 @@
     "view_all_projects": "View all projects",
     "explore_more": "Explore more",
     "go_to_home_page": "Go to home page",
+    "go_back_home_page": "Back to home page",
     "visit_my_github": "Visit my Github",
     "contact_with_me_on_messenger": "Contact with me on messenger",
     "photo_source": "Photo source",
     "back": "Back",
     "source_code": "Source code",
-    "watch_live": "Watch live"
+    "watch_live": "Watch live",
+    "not_found": "That page does not exist!"
   },
   "Home": {
     "my_name_is_oliwer": "My name is <mark>Oliwer</mark>",

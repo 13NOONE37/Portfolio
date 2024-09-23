@@ -1,0 +1,12 @@
+.container {
+  padding: var(--section-padding);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 2rem;
+  min-height: 100%;
+}
+.container h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
