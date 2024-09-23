@@ -119,7 +119,7 @@ const ContactForm = ({ className }: { className?: string }) => {
               />
             </div> */}
             <div className={styles.submit}>
-              <PrimaryButton type="submit">Send message</PrimaryButton>
+              <PrimaryButton type="submit">{t('send_message')}</PrimaryButton>
             </div>
           </Form>
         )}
