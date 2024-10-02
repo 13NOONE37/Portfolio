@@ -137,7 +137,7 @@ export default function Project({
           />
         </article>
       </div>
-      <TimeToBuildProject />
+      <TimeToBuildProject className={styles.timeToBuildProject} />
       <ContactSection />
     </>
   );

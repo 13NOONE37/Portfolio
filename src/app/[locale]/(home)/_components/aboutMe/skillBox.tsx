@@ -1,78 +1,93 @@
 'use client';
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
-import {
-  Center,
-  Environment,
-  ScrollControls,
-  useScroll,
-} from '@react-three/drei';
+import React, { ReactNode, Suspense, useEffect, useRef, useState } from 'react';
+import { Center, Environment, useEnvironment } from '@react-three/drei';
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber';
-import { easing } from 'maath';
 import { DRACOLoader, GLTFLoader } from 'three/examples/jsm/Addons.js';
-import { useSpring, animated } from '@react-spring/three';
-import useThreeMousePos from '@/hooks/useThreeMousePos';
 import { Group } from 'three';
-import { isMobile, isTablet } from 'react-device-detect';
+import { useGesture } from '@use-gesture/react';
+import { useSpring, animated } from '@react-spring/three';
+import { easing } from 'maath';
+import LoaderR3F from '@/components/loaderR3F/loaderR3F';
 
 const SkillBox = () => {
   return <MyCanvas />;
 };
 
 function MyCanvas() {
-  const isMobileDevice = isMobile || isTablet;
   return (
     <Canvas
       orthographic
       camera={{
-        position: [0, 5, 150],
+        position: [0, 0, 150],
         zoom: 100,
       }}
+      style={{ touchAction: 'none' }}
     >
-      <ambientLight intensity={0.65} />
-      <directionalLight position={[0, 10, 10]} intensity={1.5} />
-      <ScrollControls
-        pages={14}
-        style={{ scrollbarWidth: 'none', scrollbarColor: 'transparent' }}
-        infinite
-        horizontal={isMobileDevice}
-      >
+      <Suspense fallback={<LoaderR3F />}>
+        <ambientLight intensity={0.65} />
+        <directionalLight position={[0, 10, 10]} intensity={1.5} />
+
         <Rig>
           <MyScene />
         </Rig>
-      </ScrollControls>
-      <Environment preset="city" environmentIntensity={1} />
+        <Env />
+      </Suspense>
     </Canvas>
   );
 }
 
+function Env() {
+  const cubeTexture = useEnvironment({ path: '/enviromentMaps/city' });
+
+  return <Environment map={cubeTexture} environmentIntensity={1} />;
+}
+
 function Rig({ children }: { children: ReactNode }) {
-  const ref = useRef<Group>(null);
-  const scroll = useScroll();
+  const { viewport } = useThree();
 
-  useFrame(({ camera, pointer, events }, delta) => {
-    if (!ref.current) return;
+  const rigRef = useRef<Group>(null);
+  const [{ rotation }, api] = useSpring(() => ({
+    rotation: [0, -0.08, 0],
+    config: {
+      tension: 280,
+      friction: 60,
+    },
+  }));
 
-    ref.current.rotation.y = -scroll.offset * (Math.PI * 2); // Rotate contents
+  const bind = useGesture({
+    onDrag: ({ movement: [mx], memo = rigRef.current?.rotation.y }) => {
+      if (!rigRef.current) return;
 
-    events.update?.();
+      api.start({
+        rotation: [0, memo + ((mx / viewport.width) * Math.PI) / 500, 0],
+      });
+      return rigRef.current.rotation.y;
+    },
+  });
+
+  useFrame(({ camera, pointer }, delta) => {
+    if (!rigRef.current) return;
 
     easing.damp3(
       camera.position,
-      [-pointer.x * 2, pointer.y + 1.5, 50],
+      [-pointer.x * 5, Math.min(2, Math.max(-2, pointer.y + 1.5)), 50],
       0.3,
       delta,
-    ); // Move camera
-    camera.lookAt(0, 0, 0); // Look at center
+    );
+    camera.lookAt(0, 0, 0);
   });
 
   return (
-    <group ref={ref} rotation={[0, 0, 0]}>
-      {children}
+    <group {...(bind() as any)}>
+      <animated.group ref={rigRef} rotation={rotation as any}>
+        {children}
+      </animated.group>
     </group>
   );
 }
+
 function MyScene() {
-  const { scene } = useLoader(GLTFLoader, '/ONE_RING.gltf', (loader) => {
+  const { scene } = useLoader(GLTFLoader, '/models/ONE_RING.gltf', (loader) => {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath('/draco-gltf/');
     loader.setDRACOLoader(dracoLoader);

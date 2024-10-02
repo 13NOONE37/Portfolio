@@ -40,9 +40,7 @@
   },
   "About": {
     "about_me": "About <br></br> <mark>me</mark>",
-    "about_me_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important> with a strong focus on front-end technologies. Below, you can explore my skillset.",
-    "scrollUpDown": "scroll up/down ...",
-    "scrollRightLeft": "scroll right/left ..."
+    "about_me_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important>. Below, you can explore my skillset."
   },
   "Work": {
     "my_work": "My <br></br> <mark>work</mark>",
@@ -73,7 +71,12 @@
     "email_is_invalid": "Email is invalid",
     "name_placeholder": "Arthur Morgan",
     "email_placeholder": "arthurmorgan@gmail.com",
-    "message_placeholder": "Hello, I need a website for my company..."
+    "message_placeholder": "Hello, I am interested in developing a website for my product. Could we schedule a call to discuss the details?",
+    "form_thank_for_message": "Thank you for reaching out!",
+    "form_something_went_wrong": "Something went wrong!",
+    "form_error": "Try again, or contact me directly via email at ",
+    "form_success": "I will get back to you as soon as possible.",
+    "close": "Close"
   },
   "Blog": {
     "my_blog": "My blog",

@@ -8,4 +8,14 @@
   height: 100%;
   margin: auto;
   overflow-x: hidden;
+
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+  }
 }

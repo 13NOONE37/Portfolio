@@ -6,8 +6,6 @@ import AboutMe from './_components/aboutMe/aboutMe';
 import MyWork from './_components/myWork/myWork';
 import MyOffer from './_components/myOffer/myOffer';
 
-import Text3DScene from '@/components/Text3DScene/Text3DScene';
-
 export default function Home({
   params: { locale },
 }: {

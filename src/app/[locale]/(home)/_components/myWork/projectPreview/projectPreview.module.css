@@ -38,12 +38,7 @@
   gap: 0.5rem;
   display: none;
 }
-.tag {
-  border-radius: 10px;
-  padding: 0.3rem 0.6rem;
-  background-color: var(--color-primary_alpha_250);
-  color: var(--color-white);
-}
+
 .cta {
   display: none;
   margin-top: 1rem;

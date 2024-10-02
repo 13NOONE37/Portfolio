@@ -1,10 +1,11 @@
 'use client';
+import LoaderR3F from '@/components/loaderR3F/loaderR3F';
 import { useSpring, animated } from '@react-spring/three';
 import { Box, Center, Text3D } from '@react-three/drei';
 import { Canvas, ThreeEvent, useThree } from '@react-three/fiber';
 import { Flex, Box as BoxGroup } from '@react-three/flex';
 import { useLocale, useTranslations } from 'next-intl';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 
 const HeroScene3D = () => {
   return <MyCanvas />;
@@ -13,9 +14,11 @@ const HeroScene3D = () => {
 function MyCanvas() {
   return (
     <Canvas orthographic camera={{ position: [0, 0, 100], zoom: 100 }}>
-      <ambientLight intensity={0.65} />
-      <directionalLight position={[0, 10, 10]} intensity={3.5} />
-      <MyScene />
+      <Suspense fallback={<LoaderR3F />}>
+        <ambientLight intensity={0.65} />
+        <directionalLight position={[0, 10, 10]} intensity={3.5} />
+        <MyScene />
+      </Suspense>
     </Canvas>
   );
 }
@@ -239,7 +242,7 @@ function SubHeading3D({ text, size = 0.2 }: { text: string; size: number }) {
     <Center>
       <Text3D
         size={size}
-        font={'/Poppins_Bold.json'}
+        font={'/fonts/Poppins_Bold.json'}
         height={0.1}
         curveSegments={12}
         letterSpacing={0.005}
@@ -255,7 +258,7 @@ function Heading3D({ text, size = 0.8 }: { text: string; size: number }) {
     <Center>
       <Text3D
         size={size}
-        font={'/Poppins_Bold.json'}
+        font={'/fonts/Poppins_Bold.json'}
         height={0.25}
         curveSegments={12}
         letterSpacing={0.005}

@@ -1,8 +1,15 @@
 .container {
-  padding: calc(2 * var(--section-padding)) var(--section-padding);
+  padding: 0 var(--section-padding);
 }
 .article {
   margin: auto;
   margin-top: var(--section-padding);
   width: min(100%, var(--article-width));
+  margin-bottom: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    margin-bottom: 10rem;
+  }
 }

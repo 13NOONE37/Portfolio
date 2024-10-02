@@ -1,27 +1,25 @@
 .projects {
   padding: 0 var(--section-padding);
-  margin: 4rem 0;
-  margin-top: 8rem;
 }
 
 .description {
   margin-top: 1rem;
 }
-.viewAllProjects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3.5rem;
-}
-.interestedBox {
-  margin-top: 3.5rem;
-}
 .list {
-  margin-top: 4rem;
+  margin-top: 2rem;
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
+}
+.viewAllProjects {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.interestedBox {
+  margin-top: 4rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,5 +28,9 @@
   }
   .interestedBox {
     margin-top: 6rem;
+  }
+  .list {
+    margin-top: 4rem;
+    gap: 4em;
   }
 }

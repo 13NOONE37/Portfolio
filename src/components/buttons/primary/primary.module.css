@@ -9,9 +9,13 @@
 
   transition: background 0.1s var(--transition-button_1);
 }
-
 @media (hover: hover) and (pointer: fine) {
   .button:hover {
     background-color: var(--color-primary_darker_hover);
   }
+}
+
+.button:disabled {
+  cursor: default;
+  background-color: var(--color-primary_grey);
 }

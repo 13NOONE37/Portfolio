@@ -1,13 +1,10 @@
-import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { SECTION_IDS } from '@/app/section_ids';
 import styles from './myWork.module.css';
-import fonts from '@/styles/fonts.module.css';
 import SectionDescription from '../../../_components/textComponents/sectionDescription/sectionDescription';
 import SectionHeading from '../../../_components/textComponents/sectionHeading/sectionHeading';
 import SoInterestedBox from '@/components/shared/sections/soInterested/soInterestedBox';
-import { SecondaryLink } from '@/components/buttons/secondary/secondary';
 import ViewAllProjects from '@/components/shared/buttons/viewAllProjects/viewAllprojects';
 import ProjectPreview from './projectPreview/projectPreview';
 import { allProjects } from 'contentlayer/generated';
@@ -16,7 +13,6 @@ import { getLocale, getTranslations } from 'next-intl/server';
 const MyWork = async () => {
   const locale = await getLocale();
   const t = await getTranslations('Work');
-  // const tShared = useTranslations('Shared');
   const projects = allProjects.filter((item) => item.locale === locale);
 
   return (
@@ -43,9 +39,9 @@ const MyWork = async () => {
           ),
         )}
       </ul>
-      <div className={styles.viewAllProjects}>
+      {/* <div className={styles.viewAllProjects}>
         <ViewAllProjects />
-      </div>
+      </div> */}
       <SoInterestedBox className={styles.interestedBox} />
     </section>
   );

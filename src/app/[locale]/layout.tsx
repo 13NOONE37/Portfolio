@@ -8,6 +8,7 @@ import '@/styles/globals.css';
 import styles from './layout.module.css';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { LANGUAGES } from '@/config/locales';
+import { EmailTemplate } from '@/components/emailTemplate/emailTemplate';
 
 export function generateStaticParams() {
   return LANGUAGES.map((locale) => ({ locale }));
@@ -39,6 +40,7 @@ export default function LocaleLayout({
           <div className={styles.container}>
             <Header />
             <main className={styles.main}>{children}</main>
+
             <Footer />
           </div>
         </Providers>

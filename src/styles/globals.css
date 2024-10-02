@@ -19,16 +19,19 @@
   --color-white-alpha_10: rgba(255, 255, 255, 0.1);
 
   --color-grey-dark: #212121;
+  --color-grey-dark-alpha_90: rgba(33, 33, 33, 0.9);
   --color-grey-dark-light: #2d2e30;
 
   --color-grey-light: #989898;
   --color-primary_darker: #ce2239;
   --color-primary_darker_hover: #9a192a;
   --color-primary: #ef253c;
+  --color-primary_grey: hsl(353, 55%, 54%);
   --color-primary_alpha_100: rgba(239, 35, 60, 0.1);
   --color-primary_alpha_250: rgba(239, 35, 60, 0.25);
 
   --color-warning: #eb5939;
+  --color-green: #5aeb39;
 
   --color-dark_alpha: rgba(22, 23, 25, 0.65);
   --color-red_alpha: rgba(24, 2, 4, 0.9);

@@ -1,24 +1,22 @@
 .offer {
   padding: 0 var(--section-padding);
-  margin: 4rem 0;
-  margin-top: 8rem;
 }
 
 .description {
   margin-top: 1rem;
 }
 .timeToBuild {
-  margin-top: 3.5rem;
+  margin-top: 2rem;
 }
 
 .list {
-  margin-top: 4rem;
+  margin-top: 2rem;
   list-style-type: none;
 
   display: flex;
   flex-direction: column;
 
-  gap: 2rem;
+  gap: 1rem;
 }
 .list--element {
   display: grid;
@@ -29,7 +27,8 @@
   z-index: 2;
   background-color: var(--color-dark-alpha_80);
 
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
+  padding: calc(var(--section-padding) * 2) var(--section-padding);
 
   display: flex;
   flex-direction: column;
@@ -51,14 +50,22 @@
 }
 @media screen and (min-width: 768px) {
   .list {
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2rem;
+  }
+  .timeToBuild {
+    margin-top: 4rem;
   }
   .content {
-    padding: 2.5rem;
+    /* padding: 2.5rem; */
+    padding: 2rem 3rem;
   }
   .element--image {
     border-radius: 10px;
+  }
+  .content--description {
+    margin-top: 1rem;
   }
 }

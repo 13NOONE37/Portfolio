@@ -11,32 +11,49 @@ import { Input, Textarea } from '@/components/input/input';
 import { PrimaryButton } from '@/components/buttons/primary/primary';
 import PrivacyButton from '@/components/shared/buttons/privacyButton/privacyButton';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { sendEmail } from '@/actions/sendEmail';
+import Loader from '@/components/loader/loader';
+import { personalInformations } from '@/config/personalInformations';
+import { SecondaryButton } from '@/components/buttons/secondary/secondary';
+import Approve from '@/assets/icons/approve';
+import Cancel from '@/assets/icons/cancel';
 
 interface Values {
   name: string;
   email: string;
   message: string;
+  captchaToken: string;
 }
-
-const initialValues = {
+const initialValues: Values = {
   name: '',
   email: '',
   message: '',
+  captchaToken: '',
 };
+type FormStatusType = 'success' | 'error' | null;
 
 const ContactForm = ({ className }: { className?: string }) => {
   const t = useTranslations('Contact');
-
-  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const [formStatus, setFormStatus] = useState<FormStatusType>(null);
 
   const handleSubmit = async (
     values: Values,
-    { setSubmitting }: FormikHelpers<Values>,
+    { setValues, setTouched }: FormikHelpers<Values>,
   ) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 500);
+    try {
+      await sendEmail({
+        name: values.name,
+        email: values.email,
+        message: values.message,
+        captchaToken: values.captchaToken,
+      });
+
+      setValues({ ...initialValues, captchaToken: values.captchaToken });
+      setTouched({ name: false, email: false, message: false });
+      setFormStatus('success');
+    } catch (error) {
+      setFormStatus('error');
+    }
   };
 
   const ValidationSchema = z.object({
@@ -46,6 +63,9 @@ const ContactForm = ({ className }: { className?: string }) => {
       .min(1, t('this_field_is_required'))
       .email(t('email_is_invalid')),
     message: z.string().min(1, t('this_field_is_required')),
+    captchaToken: z
+      .string({ message: t('this_field_is_required') })
+      .min(1, t('this_field_is_required')),
   });
 
   const handleValidate = (values: Values) => {
@@ -53,7 +73,7 @@ const ContactForm = ({ className }: { className?: string }) => {
       ValidationSchema.parse(values);
     } catch (error) {
       if (error instanceof ZodError) {
-        return error.formErrors.fieldErrors;
+        return error.flatten().fieldErrors;
       }
     }
   };
@@ -61,18 +81,22 @@ const ContactForm = ({ className }: { className?: string }) => {
   return (
     <div className={cx(styles.container, className)}>
       <h3 className={fonts.heading_500}>{t('contact_form')}</h3>
+
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
         validate={handleValidate}
+        validateOnMount
       >
         {({
           values,
           isSubmitting,
+          isValid,
           errors,
           touched,
           handleChange,
           handleBlur,
+          setFieldValue,
         }) => (
           <Form className={styles.form}>
             <Input
@@ -110,16 +134,23 @@ const ContactForm = ({ className }: { className?: string }) => {
               />
               <PrivacyButton className={styles.privacy} />
             </div>
-            {/* <div className={styles.captcha}>
+            <div className={styles.captcha}>
               <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY as string}
-                onChange={(token) => {
-                  setCaptchaValue(token);
-                }}
+                sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY!}
+                onChange={(token) => setFieldValue('captchaToken', token)}
               />
-            </div> */}
+            </div>
+
+            <LoadingBox
+              isSubmitting={isSubmitting}
+              formStatus={formStatus}
+              setFormStatus={setFormStatus}
+            />
+
             <div className={styles.submit}>
-              <PrimaryButton type="submit">{t('send_message')}</PrimaryButton>
+              <PrimaryButton type="submit" disabled={!isValid || isSubmitting}>
+                {t('send_message')}
+              </PrimaryButton>
             </div>
           </Form>
         )}
@@ -128,4 +159,70 @@ const ContactForm = ({ className }: { className?: string }) => {
   );
 };
 
+function LoadingBox({
+  isSubmitting,
+  formStatus,
+  setFormStatus,
+}: {
+  isSubmitting: boolean;
+  formStatus: FormStatusType;
+  setFormStatus: React.Dispatch<React.SetStateAction<FormStatusType>>;
+}) {
+  const t = useTranslations('Contact');
+
+  return (
+    <div
+      className={cx(styles.loadingBox, {
+        [styles['loadingBox__visible']]: isSubmitting || formStatus !== null,
+      })}
+    >
+      {formStatus === 'success' && (
+        <div
+          className={styles.loadingBox__icon}
+          style={{ fill: 'var(--color-green)' }}
+        >
+          <Approve />
+        </div>
+      )}
+      {formStatus === 'error' && (
+        <div
+          className={styles.loadingBox__icon}
+          style={{ fill: 'var(--color-warning)' }}
+        >
+          <Cancel />
+        </div>
+      )}
+
+      <div className={styles.loadingBox__info}>
+        <span className={fonts.heading_400}>
+          {formStatus === 'success' && t('form_thank_for_message')}
+          {formStatus === 'error' && t('form_something_went_wrong')}
+        </span>
+
+        {formStatus === 'success' && (
+          <span className={fonts.body__thick}>{t('form_success')}</span>
+        )}
+        {formStatus === 'error' && (
+          <span className={fonts.body__thick}>
+            {t('form_error')}
+            <a href={`mailto:${personalInformations.email}`}>
+              {personalInformations.email}
+            </a>
+          </span>
+        )}
+      </div>
+      {formStatus === null && (
+        <Loader secondaryColor="var(--color-grey-dark)" />
+      )}
+
+      {formStatus !== null && (
+        <div className={styles.loadingBox__closeButton}>
+          <SecondaryButton onClick={() => setFormStatus(null)}>
+            {t('close')}
+          </SecondaryButton>
+        </div>
+      )}
+    </div>
+  );
+}
 export default ContactForm;

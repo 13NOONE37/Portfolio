@@ -15,7 +15,7 @@
   "Shared": {
     "lets_contact": "Skontaktujmy się!",
     "so_interested": "I jak, <mark>zainteresowany?</mark>",
-    "its_time_to_build_product_your_clients_will_love": "Czas <mark>zbudować</mark> produkt,<br></br> który pokochają Twoi klienci!",
+    "its_time_to_build_product_your_clients_will_love": "Czas <mark>zbudować produkt</mark>,<br></br> który pokochają Twoi klienci!",
     "contact_me": "Napisz do mnie!",
     "lets_create_something_together": "<mark>Zbudujmy</mark> coś razem!",
     "privacy_policy": "Polityka prywatności",
@@ -41,9 +41,7 @@
   },
   "About": {
     "about_me": "O <br></br> <mark>mnie</mark>",
-    "about_me_description": "Cześć, nazywam się <important>Oliwer Klauze</important> i jestem <important>Full Stack Developerem</important> z naciskiem na technologie front-endowe. Poniżej możesz zapoznać się z używanymi przeze mnie technologiami.",
-    "scrollUpDown": "Przewijaj w górę/dół ...",
-    "scrollRightLeft": "Przewijaj w prawo/lewo ..."
+    "about_me_description": "Cześć, nazywam się <important>Oliwer Klauze</important> i jestem <important>Full Stack Developerem</important>. Poniżej możesz zapoznać się z używanymi przeze mnie technologiami."
   },
   "Work": {
     "my_work": "Moje <br></br> <mark>projekty</mark>",
@@ -73,7 +71,12 @@
     "email_is_invalid": "Email jest nieprawidłowy",
     "name_placeholder": "Tomasz Nowak",
     "email_placeholder": "tomasznowak@gmail.com",
-    "message_placeholder": "Cześć, potrzebuję strony startowej dla mojego produktu.Czy możemy się umówić na rozmowę?"
+    "message_placeholder": "Cześć, potrzebuję strony startowej dla mojego produktu. Czy możemy się umówić na rozmowę aby przedyskutować szczegóły?",
+    "form_thank_for_message": "Dziękuję za wiadomość!",
+    "form_something_went_wrong": "Nie udało się wysłać wiadomości!",
+    "form_error": "Spróbuj ponownie lub napisz bezpośrednio na email ",
+    "form_success": "Odpowiem najszybciej, jak to możliwe.",
+    "close": "Zamknij"
   },
   "Blog": {
     "my_blog": "Mój blog",

@@ -7,7 +7,6 @@ import styles from './aboutMe.module.css';
 import SectionDescription from '../../../_components/textComponents/sectionDescription/sectionDescription';
 import SkillBox from './skillBox';
 import { isMobile, isTablet } from 'react-device-detect';
-import InformationSkillBox from './informationSkillBox';
 
 const AboutMe = () => {
   const t = useTranslations('About');
@@ -21,7 +20,7 @@ const AboutMe = () => {
       <SectionDescription className={styles.description}>
         {t.rich('about_me_description')}
       </SectionDescription>
-      <InformationSkillBox />
+
       <div className={styles.skillBox}>
         <SkillBox />
       </div>
