@@ -6,9 +6,8 @@ import Footer from './_components/footer/footer';
 
 import '@/styles/globals.css';
 import styles from './layout.module.css';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { LANGUAGES } from '@/config/locales';
-import { EmailTemplate } from '@/components/emailTemplate/emailTemplate';
 
 export function generateStaticParams() {
   return LANGUAGES.map((locale) => ({ locale }));
@@ -19,11 +18,21 @@ const poppins = Poppins({
   weight: ['700', '600', '500', '400'],
 });
 
-export const metadata: Metadata = {
-  title: 'Oliwer Klauze',
-  description: '#TODO: description',
-};
-
+// export const metadata: Metadata = {
+//   title: 'Oliwer Klauze',
+//   description: '#TODO: description',
+// };
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations('Meta');
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 export default function LocaleLayout({
   children,
   params: { locale },

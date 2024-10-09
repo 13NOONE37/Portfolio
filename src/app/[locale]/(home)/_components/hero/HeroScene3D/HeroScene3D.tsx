@@ -50,6 +50,7 @@ function MyScene() {
   });
 
   const canvasMargin = 0.15;
+  const [showScene, setShowScene] = useState(false);
   const [sideMargin, setSideMargin] = useState(0);
   const [displayCorners, setDisplayCorners] = useState(true);
   const [headingSize, setHeadingSize] = useState(0.2);
@@ -115,6 +116,7 @@ function MyScene() {
     }
   };
   useEffect(() => {
+    setShowScene(true);
     handleReflow();
   }, []);
 
@@ -150,7 +152,7 @@ function MyScene() {
             marginTop={0.35}
           >
             <BoxGroup centerAnchor>
-              <Corner hide={!displayCorners} />
+              <Corner hide={!displayCorners} showScene={showScene} />
             </BoxGroup>
           </BoxGroup>
 
@@ -213,7 +215,7 @@ function MyScene() {
           {/* Corner bottom */}
           <BoxGroup alignItems={'flex-end'} marginTop={0.5} marginBottom={0.35}>
             <BoxGroup centerAnchor rotation={[Math.PI, Math.PI, 0]}>
-              <Corner hide={!displayCorners} />
+              <Corner hide={!displayCorners} showScene={showScene} />
             </BoxGroup>
           </BoxGroup>
         </BoxGroup>
@@ -221,7 +223,13 @@ function MyScene() {
     </animated.group>
   );
 }
-function Corner({ hide = false }: { hide?: boolean }) {
+function Corner({
+  hide = false,
+  showScene = false,
+}: {
+  hide?: boolean;
+  showScene?: boolean;
+}) {
   return (
     <group>
       <Box
@@ -229,10 +237,18 @@ function Corner({ hide = false }: { hide?: boolean }) {
         position={[-0.15, -0.15, 0]}
         scale={hide ? 0 : 1}
       >
-        <meshStandardMaterial color={'#ffffff'} />
+        <meshStandardMaterial
+          color={'#ffffff'}
+          transparent={!showScene}
+          opacity={showScene ? 1 : 0}
+        />
       </Box>
       <Box args={[0.4, 0.1, 0.25]} position={[0, 0, 0]} scale={hide ? 0 : 1}>
-        <meshStandardMaterial color={'#ffffff'} />
+        <meshStandardMaterial
+          color={'#ffffff'}
+          transparent={!showScene}
+          opacity={showScene ? 1 : 0}
+        />
       </Box>
     </group>
   );

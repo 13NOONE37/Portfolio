@@ -5,7 +5,6 @@ import styles from './myWork.module.css';
 import SectionDescription from '../../../_components/textComponents/sectionDescription/sectionDescription';
 import SectionHeading from '../../../_components/textComponents/sectionHeading/sectionHeading';
 import SoInterestedBox from '@/components/shared/sections/soInterested/soInterestedBox';
-import ViewAllProjects from '@/components/shared/buttons/viewAllProjects/viewAllprojects';
 import ProjectPreview from './projectPreview/projectPreview';
 import { allProjects } from 'contentlayer/generated';
 import { getLocale, getTranslations } from 'next-intl/server';
@@ -13,7 +12,13 @@ import { getLocale, getTranslations } from 'next-intl/server';
 const MyWork = async () => {
   const locale = await getLocale();
   const t = await getTranslations('Work');
-  const projects = allProjects.filter((item) => item.locale === locale);
+  const projects = allProjects
+    .filter((item) => item.locale === locale)
+    .sort((a, b) => {
+      const dateA = new Date(a.publishAt || 0);
+      const dateB = new Date(b.publishAt || 0);
+      return dateB.getTime() - dateA.getTime();
+    });
 
   return (
     <section className={styles.projects} id={SECTION_IDS.projects}>

@@ -81,5 +81,9 @@
   "Blog": {
     "my_blog": "Mój blog",
     "my_blog_description": "Tutaj dzielę się swoimi przemyśleniami. Znajdziesz moje opinie na tematy społeczne i technologiczne. Poniżej możesz zobaczyć wybrane wpisy!"
+  },
+  "Meta": {
+    "title": "Oliwer Klauze",
+    "description": "Nazywam się Oliwer Klauze i specjalizuję się w tworzeniu angażujących, przyjaznych dla użytkownika stron internetowych, które podkreślają charakter Twojej marki i zapewniają płynne doświadczenia. Zmieńmy Twoje pomysły w rzeczywistość!"
   }
 }

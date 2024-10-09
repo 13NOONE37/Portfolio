@@ -10,7 +10,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 .viewAllProjects {
   margin-top: 4rem;
@@ -31,6 +31,6 @@
   }
   .list {
     margin-top: 4rem;
-    gap: 4em;
+    gap: 8em;
   }
 }

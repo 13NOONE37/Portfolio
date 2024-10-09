@@ -23,6 +23,7 @@
   position: relative;
 }
 .content {
+  border-radius: 10px;
   min-height: 240px;
   z-index: 2;
   background-color: var(--color-dark-alpha_80);
