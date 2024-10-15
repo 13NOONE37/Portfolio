@@ -43,9 +43,9 @@ export default function Project({
   const project = allProjects.find(
     (item) => item.slug === slug && item.locale === locale,
   );
-  if (!project) return notFound();
-
+  if (!project) notFound();
   const MDXContent = useMDXComponent(project.body.code);
+
   return (
     <>
       <div className={styles.container}>
