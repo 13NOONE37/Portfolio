@@ -37,7 +37,7 @@ const ProjectPreview = ({
           </p>
           <ul className={styles.tags}>
             {tags.map((tag) => (
-              <li>
+              <li key={tag}>
                 <Tag highlited>{tag}</Tag>
               </li>
             ))}

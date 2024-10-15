@@ -31,7 +31,7 @@ const MyWork = async () => {
       <ul className={styles.list}>
         {projects.map(
           ({ title, short_description, tags = [], slug, thumbnail }, index) => (
-            <li className={styles['list--element']}>
+            <li className={styles['list--element']} key={title}>
               <ProjectPreview
                 title={title}
                 description={short_description}

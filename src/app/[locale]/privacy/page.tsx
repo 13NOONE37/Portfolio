@@ -26,9 +26,9 @@ export default function Privacy({
   const privacyPolicy = allAttachments.find(
     (item) => item.name === 'privacy-policy' && item.locale === locale,
   );
-  if (!privacyPolicy) return notFound();
-
+  if (!privacyPolicy) notFound();
   const MDXContent = useMDXComponent(privacyPolicy.body.code);
+
   return (
     <>
       <div className={styles.container}>

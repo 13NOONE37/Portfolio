@@ -51,7 +51,7 @@ const Socials = () => {
   return (
     <ul className={styles.socials}>
       {links.map(({ href, ariaLabel, icon }) => (
-        <li>
+        <li key={href}>
           <Link
             href={href}
             target="_blank"
