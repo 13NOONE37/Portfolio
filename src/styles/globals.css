@@ -45,15 +45,14 @@
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  /* TODO: change to rem */
-  --fs-200: 12px;
-  --fs-300: 14px;
-  --fs-400: 16px;
-  --fs-500: 18px;
-  --fs-600: 24px;
-  --fs-700: 32px;
-  --fs-800: 48px;
-  --fs-900: 112px;
+  --fs-200: 0.75rem;
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 3rem;
+  --fs-900: 7rem;
 
   --section-width: 1240px;
   --article-width: 712px;

@@ -8,15 +8,6 @@ import GoNextCTA from './goNextCTA';
 import HeroScene3D from './HeroScene3D/HeroScene3D';
 
 const Hero = () => {
-  //TODO: my abilities
-  // Jeden duży kontener w którym będą kulki z logami poszczególnych
-  //technologi coś w tym stylu https://codesandbox.io/p/sandbox/lusion-connectors-xy8c8z?file=%2Fsrc%2FApp.js%3A8%2C68-8%2C87
-  //https://chriskalafatis.com/
-
-  //TODO: my offer
-  //usuwamy let's contact zostanie tylko its'time; trzeba zaciekawić obrazkiem ;
-  //może mniej tekstów a więcej konkretów;
-
   const t = useTranslations('Home');
   return (
     <section className={styles.container}>

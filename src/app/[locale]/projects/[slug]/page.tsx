@@ -21,7 +21,6 @@ import fonts from '@/styles/fonts.module.css';
 
 import CodeIcon from '@/assets/icons/code';
 import LiveIcon from '@/assets/icons/live';
-import ContactForm from '../../_components/contactSection/contactForm/contactForm';
 import TimeToBuildProject from '@/components/shared/sections/timeToBuildProject/timeToBuildProject';
 import Tag from '@/components/shared/tag/tag';
 import { SecondaryLink } from '@/components/buttons/secondary/secondary';
@@ -30,13 +29,18 @@ import GoBack from '@/components/blogComponents/goBack/goBack';
 import ContactSection from '../../_components/contactSection/contactSection';
 import { useTranslations } from 'next-intl';
 
+export const generateStaticParams = async () =>
+  allProjects.map((project) => ({
+    locale: project.locale,
+    slug: project.slug,
+  }));
+
 export default function Project({
   params: { locale, slug },
 }: {
   params: { locale: string; slug: string };
 }) {
   unstable_setRequestLocale(locale);
-  //TODO: prebuild projektów getStaticParams
 
   const t = useTranslations('Shared');
 

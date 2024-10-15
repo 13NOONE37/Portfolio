@@ -18,10 +18,6 @@ const poppins = Poppins({
   weight: ['700', '600', '500', '400'],
 });
 
-// export const metadata: Metadata = {
-//   title: 'Oliwer Klauze',
-//   description: '#TODO: description',
-// };
 export async function generateMetadata({
   params: { locale },
 }: {
