@@ -34,14 +34,16 @@ export async function generateMetadata({
     openGraph: {
       title: t('title'),
       description: t('description'),
-      images: `${process.env.NEXT_PUBLIC_BASE_URL}/images/thumbnail_${locale}`,
+      images: `${process.env.NEXT_PUBLIC_BASE_URL}/images/thumbnail_${locale}.jpg`,
       type: 'website',
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
+      siteName: 'Oliwer Klauze',
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: `${process.env.NEXT_PUBLIC_BASE_URL}/images/thumbnail_${locale}`,
+      images: `${process.env.NEXT_PUBLIC_BASE_URL}/images/thumbnail_${locale}.jpg`,
     },
   };
 }
