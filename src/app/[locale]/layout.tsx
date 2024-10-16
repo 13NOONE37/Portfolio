@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import Providers from '@/providers/providers';
 import Header from './_components/header/header';
@@ -8,6 +7,7 @@ import '@/styles/globals.css';
 import styles from './layout.module.css';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { LANGUAGES } from '@/config/locales';
+import { Metadata } from 'next';
 
 export function generateStaticParams() {
   return LANGUAGES.map((locale) => ({ locale }));
@@ -22,11 +22,27 @@ export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
-}) {
+}): Promise<Metadata> {
   const t = await getTranslations('Meta');
   return {
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: process.env.NEXT_PUBLIC_BASE_URL,
+    },
+    keywords: `Oliwer Klauze`,
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      images: `${process.env.NEXT_PUBLIC_BASE_URL}/images/thumbnail_${locale}`,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: `${process.env.NEXT_PUBLIC_BASE_URL}/images/thumbnail_${locale}`,
+    },
   };
 }
 export default function LocaleLayout({

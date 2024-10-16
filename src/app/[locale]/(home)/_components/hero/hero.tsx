@@ -3,7 +3,6 @@ import cx from 'classnames';
 import styles from './hero.module.css';
 import fonts from '@/styles/fonts.module.css';
 import { useTranslations } from 'next-intl';
-import ArrowEndIcon from '@/assets/icons/arrowEnd';
 import GoNextCTA from './goNextCTA';
 import HeroScene3D from './HeroScene3D/HeroScene3D';
 
