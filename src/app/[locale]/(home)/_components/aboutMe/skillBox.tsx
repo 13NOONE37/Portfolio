@@ -21,11 +21,17 @@ function MyCanvas() {
         position: [0, 0, 150],
         zoom: 100,
       }}
-      style={{ touchAction: 'none' }}
+      style={{
+        touchAction: 'none',
+      }}
     >
       <Suspense fallback={<LoaderR3F />}>
         <ambientLight intensity={0.65} />
-        <directionalLight position={[0, 10, 10]} intensity={1.5} />
+        <directionalLight
+          position={[0, 10, 10]}
+          intensity={1.5}
+          castShadow={false}
+        />
 
         <Rig>
           <MyScene />
@@ -36,13 +42,12 @@ function MyCanvas() {
   );
 }
 
-function Env() {
+const Env = React.memo(() => {
   const cubeTexture = useEnvironment({ path: '/enviromentMaps/city' });
 
   return <Environment map={cubeTexture} environmentIntensity={1} />;
-}
-
-function Rig({ children }: { children: ReactNode }) {
+});
+const Rig = React.memo(({ children }: { children: ReactNode }) => {
   const { viewport } = useThree();
 
   const rigRef = useRef<Group>(null);
@@ -66,14 +71,15 @@ function Rig({ children }: { children: ReactNode }) {
   });
 
   useFrame(({ camera, pointer }, delta) => {
-    if (!rigRef.current) return;
-
-    easing.damp3(
-      camera.position,
-      [-pointer.x * 5, Math.min(2, Math.max(-2, pointer.y + 1.5)), 50],
-      0.3,
-      delta,
-    );
+    // if (!rigRef.current) return;
+    if (pointer.x !== 0 || pointer.y !== 0) {
+      easing.damp3(
+        camera.position,
+        [-pointer.x * 5, Math.min(2, Math.max(-2, pointer.y + 1.5)), 50],
+        0.3,
+        delta,
+      );
+    }
     camera.lookAt(0, 0, 0);
   });
 
@@ -84,9 +90,9 @@ function Rig({ children }: { children: ReactNode }) {
       </animated.group>
     </group>
   );
-}
+});
 
-function MyScene() {
+const MyScene = React.memo(() => {
   const { scene } = useLoader(GLTFLoader, '/models/ONE_RING.gltf', (loader) => {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath('/draco-gltf/');
@@ -102,10 +108,10 @@ function MyScene() {
   return (
     <Center>
       <animated.group scale={ringScale as any} rotation={[0, Math.PI * 1.5, 0]}>
-        <primitive object={scene} />
+        <primitive object={scene} frustrumCulled={true} />
       </animated.group>
     </Center>
   );
-}
+});
 
 export default SkillBox;

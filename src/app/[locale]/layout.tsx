@@ -30,14 +30,14 @@ export async function generateMetadata({
     alternates: {
       canonical: process.env.NEXT_PUBLIC_BASE_URL,
     },
-    keywords: `Oliwer Klauze`,
+    keywords: `${t('title')}`,
     openGraph: {
       title: t('title'),
       description: t('description'),
       images: `/images/shared/thumbnail_${locale}.jpg`,
       type: 'website',
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
-      siteName: 'Oliwer Klauze',
+      url: process.env.NEXT_PUBLIC_BASE_URL,
+      siteName: t('title'),
     },
     twitter: {
       card: 'summary_large_image',

@@ -6,6 +6,7 @@ import { Canvas, ThreeEvent, useThree } from '@react-three/fiber';
 import { Flex, Box as BoxGroup } from '@react-three/flex';
 import { useLocale, useTranslations } from 'next-intl';
 import React, { Suspense, useEffect, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 const HeroScene3D = () => {
   return <MyCanvas />;
@@ -30,6 +31,7 @@ function MyScene() {
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const onPointerMove = ({ offsetX, offsetY }: ThreeEvent<PointerEvent>) => {
+    // if (isMobile) return;
     const { width, height } = size;
     const x = offsetX / width - 0.5;
     const y = offsetY / height - 0.5;

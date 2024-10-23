@@ -10,7 +10,7 @@
   gap: 1.5rem;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 540px) {
   .interestedBox--buttons {
     flex-direction: row;
     gap: 2rem;
