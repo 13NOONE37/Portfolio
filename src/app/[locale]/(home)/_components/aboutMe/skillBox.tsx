@@ -42,12 +42,13 @@ function MyCanvas() {
   );
 }
 
-const Env = React.memo(() => {
+function Env() {
   const cubeTexture = useEnvironment({ path: '/enviromentMaps/city' });
 
   return <Environment map={cubeTexture} environmentIntensity={1} />;
-});
-const Rig = React.memo(({ children }: { children: ReactNode }) => {
+}
+
+function Rig({ children }: { children: ReactNode }) {
   const { viewport } = useThree();
 
   const rigRef = useRef<Group>(null);
@@ -90,9 +91,9 @@ const Rig = React.memo(({ children }: { children: ReactNode }) => {
       </animated.group>
     </group>
   );
-});
+}
 
-const MyScene = React.memo(() => {
+function MyScene() {
   const { scene } = useLoader(GLTFLoader, '/models/ONE_RING.gltf', (loader) => {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath('/draco-gltf/');
@@ -112,6 +113,6 @@ const MyScene = React.memo(() => {
       </animated.group>
     </Center>
   );
-});
+}
 
 export default SkillBox;
