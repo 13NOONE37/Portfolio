@@ -6,7 +6,6 @@ import { Canvas, ThreeEvent, useThree } from '@react-three/fiber';
 import { Flex, Box as BoxGroup } from '@react-three/flex';
 import { useLocale, useTranslations } from 'next-intl';
 import React, { Suspense, useEffect, useState } from 'react';
-import { isMobile } from 'react-device-detect';
 
 const HeroScene3D = () => {
   return <MyCanvas />;

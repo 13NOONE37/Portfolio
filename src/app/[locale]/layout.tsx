@@ -27,9 +27,15 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
     alternates: {
-      canonical: process.env.NEXT_PUBLIC_BASE_URL,
+      canonical: '/',
+      languages: {
+        'en-US': '/en',
+        'pl-PL': '/pl',
+      },
     },
+
     keywords: `${t('title')}`,
     openGraph: {
       title: t('title'),

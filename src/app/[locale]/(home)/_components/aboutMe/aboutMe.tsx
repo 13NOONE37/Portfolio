@@ -6,12 +6,10 @@ import SectionHeading from '../../../_components/textComponents/sectionHeading/s
 import styles from './aboutMe.module.css';
 import SectionDescription from '../../../_components/textComponents/sectionDescription/sectionDescription';
 import SkillBox from './skillBox';
-import { isMobile, isTablet } from 'react-device-detect';
 
 const AboutMe = () => {
   const t = useTranslations('About');
 
-  const isMobileDevice = isMobile || isTablet;
   return (
     <section className={styles.about} id={SECTION_IDS.about}>
       <SectionHeading className={styles.heading}>

@@ -46,7 +46,7 @@
   },
   "Work": {
     "my_work": "Moje <br></br> <mark>projekty</mark>",
-    "my_work_description": "Poznaj niektóre z moich najciekawszych projektów. Znajdziesz tu zarówno <important>imponujące strony internetowe</important> jak i <important>intuicyjne aplikacje</important>, które pomagają moim klientom efektywnie zarządzać ich biznesami.",
+    "my_work_description": "Poznaj niektóre z moich najciekawszych projektów. Znajdziesz tu zarówno <important>zapadające w pamięci strony internetowe</important> jak i <important>intuicyjne aplikacje</important>, które pomagają moim klientom efektywnie zarządzać ich biznesami.",
     "screenshot_of_the": "Zrzut ekranu z",
     "view_project": "Zobacz projekt"
   },
@@ -84,7 +84,7 @@
     "my_blog_description": "Tutaj dzielę się swoimi przemyśleniami. Znajdziesz moje opinie na tematy społeczne i technologiczne. Poniżej możesz zobaczyć wybrane wpisy!"
   },
   "Meta": {
-    "title": "Oliwer Klauze",
+    "title": "Oliwer Klauze • Strony i aplikacje internetowe",
     "description": "Specjalizuję się w tworzeniu angażujących, przyjaznych dla użytkownika stron internetowych, które podkreślają charakter Twojej marki i zapewniają płynne doświadczenia. Zmieńmy Twoje pomysły w rzeczywistość!"
   }
 }
