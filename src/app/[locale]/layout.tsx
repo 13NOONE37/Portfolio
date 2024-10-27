@@ -36,7 +36,7 @@ export async function generateMetadata({
       },
     },
 
-    keywords: `${t('title')}`,
+    keywords: t('keywords'),
     openGraph: {
       title: t('title'),
       description: t('description'),
