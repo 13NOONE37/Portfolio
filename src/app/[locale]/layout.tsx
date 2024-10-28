@@ -65,15 +65,22 @@ export default function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={poppins.className}>
-        <Providers>
-          <div className={styles.container}>
-            <Header />
-            <main className={styles.main}>{children}</main>
-
-            <Footer />
-          </div>
-        </Providers>
+        <div>Under maintenance</div>
       </body>
     </html>
   );
+  // return (
+  //   <html lang={locale}>
+  //     <body className={poppins.className}>
+  //       <Providers>
+  //         <div className={styles.container}>
+  //           <Header />
+  //           <main className={styles.main}>{children}</main>
+
+  //           <Footer />
+  //         </div>
+  //       </Providers>
+  //     </body>
+  //   </html>
+  // );
 }
