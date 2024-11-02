@@ -42,7 +42,10 @@
   },
   "About": {
     "about_me": "O <br></br> <mark>mnie</mark>",
-    "about_me_description": "Cześć, nazywam się <important>Oliwer Klauze</important> i jestem <important>Full Stack Developerem</important>. Poniżej możesz zapoznać się z używanymi przeze mnie technologiami."
+    "about_me_description": "Nazywam się <important>Oliwer Klauze</important> i jestem <important>Full Stack Developerem</important>. Tworzę nowoczesne strony oraz aplikacje internetowe, dbając o ich prostotę, wysoką wydajność i estetykę.",
+    "experience_title": "Doświadczenie",
+    "experience_content": "Od 2023 roku działam jako freelancer w branży IT, realizując projekty zarówno dla firm, jak i klientów indywidualnych. Każde zlecenie to dla mnie okazja, by tworzyć dopasowane rozwiązania, które łączą technologię z indywidualnymi potrzebami klienta.",
+    "devtools_title": "Narzędzia"
   },
   "Work": {
     "my_work": "Moje <br></br> <mark>projekty</mark>",
@@ -52,7 +55,7 @@
   },
   "Offer": {
     "my_offer": "Moja <br></br> <mark>oferta</mark>",
-    "my_offer_description": "<important>Zrealizuję Twoje pomysły od zera</important>, wykorzystując nowoczesne i szybkie technologie, które zapewniają niezawodność i przyszłościowość Twojej aplikacji, umożliwiając łatwe skalowanie.",
+    "my_offer_description": "<important>Zrealizuję Twoje pomysły od zera</important>, wykorzystując nowoczesne i szybkie technologie, które zapewniają niezawodność i przyszłościowość Twojej aplikacji, umożliwiając łatwe skalowanie i rozwój aplikacji w przyszłości.",
     "websites": "Strony internetowe",
     "websites_description": "Niezależnie od tego, czy potrzebujesz strony startowej dla swojego buisnessu, osobistej witryny, bloga czy platformy e-commerce, tworzę angażujące strony internetowe, które prezentują Twoją markę i zapewniają doskonałe doświadczenia użytkowników.",
     "websites_photo_alt": "Kobieta przeglądająca telefon",

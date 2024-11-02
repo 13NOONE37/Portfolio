@@ -28,8 +28,7 @@
   z-index: 2;
   background-color: var(--color-dark-alpha_80);
 
-  /* padding: 1.5rem; */
-  padding: calc(var(--section-padding) * 2) var(--section-padding);
+  padding: var(--section-padding);
 
   display: flex;
   flex-direction: column;
@@ -37,7 +36,7 @@
 .content--title {
 }
 .content--description {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   max-width: var(--paragraph-width);
 }
 .element--image {
@@ -65,8 +64,5 @@
   }
   .element--image {
     border-radius: 10px;
-  }
-  .content--description {
-    margin-top: 1rem;
   }
 }

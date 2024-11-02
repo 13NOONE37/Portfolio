@@ -41,7 +41,10 @@
   },
   "About": {
     "about_me": "About <br></br> <mark>me</mark>",
-    "about_me_description": "Hi, I'm <important>Oliwer Klauze</important>, a passionate <important>Full Stack Developer</important>. Below, you can explore my skillset."
+    "about_me_description": "I am <important>Oliwer Klauze</important>, and I’m a <important>Full Stack Developer</important>. I create modern websites and web applications, focusing on simplicity, high performance, and aesthetics.",
+    "experience_title": "Experience",
+    "experience_content": "Since 2023, I have been working as a freelancer in the IT industry, delivering projects for both companies and individual clients. Each assignment is an opportunity for me to create tailored solutions that blend technology with the unique needs of the client.",
+    "devtools_title": "Dev tools"
   },
   "Work": {
     "my_work": "My <br></br> <mark>work</mark>",

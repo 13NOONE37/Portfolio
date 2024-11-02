@@ -62,25 +62,25 @@ export default function LocaleLayout({
 }>) {
   unstable_setRequestLocale(locale);
 
-  return (
-    <html lang={locale}>
-      <body className={poppins.className}>
-        <div>Under maintenance</div>
-      </body>
-    </html>
-  );
   // return (
   //   <html lang={locale}>
   //     <body className={poppins.className}>
-  //       <Providers>
-  //         <div className={styles.container}>
-  //           <Header />
-  //           <main className={styles.main}>{children}</main>
-
-  //           <Footer />
-  //         </div>
-  //       </Providers>
+  //       <div>Under maintenance</div>
   //     </body>
   //   </html>
   // );
+  return (
+    <html lang={locale}>
+      <body className={poppins.className}>
+        <Providers>
+          <div className={styles.container}>
+            <Header />
+            <main className={styles.main}>{children}</main>
+
+            <Footer />
+          </div>
+        </Providers>
+      </body>
+    </html>
+  );
 }

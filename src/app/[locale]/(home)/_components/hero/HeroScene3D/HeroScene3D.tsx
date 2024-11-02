@@ -1,11 +1,12 @@
 'use client';
 import LoaderR3F from '@/components/loaderR3F/loaderR3F';
 import { useSpring, animated } from '@react-spring/three';
-import { Box, Center, Text3D } from '@react-three/drei';
+import { Box, Center, Float, Text3D } from '@react-three/drei';
 import { Canvas, ThreeEvent, useThree } from '@react-three/fiber';
 import { Flex, Box as BoxGroup } from '@react-three/flex';
 import { useLocale, useTranslations } from 'next-intl';
 import React, { Suspense, useEffect, useState } from 'react';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 const HeroScene3D = () => {
   return <MyCanvas />;
@@ -17,20 +18,32 @@ function MyCanvas() {
       <Suspense fallback={<LoaderR3F />}>
         <ambientLight intensity={0.65} />
         <directionalLight position={[0, 10, 10]} intensity={3.5} />
-        <MyScene />
+        <BrowserView renderWithFragment>
+          <MyScene />
+        </BrowserView>
+        <MobileView renderWithFragment>
+          <Float
+            speed={1} // Animation speed, defaults to 1
+            rotationIntensity={1} // XYZ rotation intensity, defaults to 1
+            floatIntensity={0.01} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+            floatingRange={[-10, 10]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+          >
+            <MyScene isMobile />
+          </Float>
+        </MobileView>
       </Suspense>
     </Canvas>
   );
 }
 
-function MyScene() {
+function MyScene({ isMobile = false }) {
   const locale = useLocale();
   const t = useTranslations('Home');
   const { viewport, size } = useThree();
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const onPointerMove = ({ offsetX, offsetY }: ThreeEvent<PointerEvent>) => {
-    // if (isMobile) return;
+    if (isMobile) return;
     const { width, height } = size;
     const x = offsetX / width - 0.5;
     const y = offsetY / height - 0.5;
