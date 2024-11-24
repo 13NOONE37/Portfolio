@@ -16,7 +16,7 @@
   text-decoration: none;
   position: relative;
   z-index: 2;
-  color: var(--color-white);
+  color: var(--color-white) !important;
   padding: 0.25rem;
   max-width: 100%;
   overflow: hidden;
